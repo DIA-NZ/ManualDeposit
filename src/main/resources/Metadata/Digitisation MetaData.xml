@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <MetaData>
-  <MetaData objectName="3" DcType="title" DataType="Text" AllowsMultipleRows="false" SortOrder="3" IsCMSSystem="false" DefaultValue="" IsCompulsory="true" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="false" IsDNX="false" DnxSubType="" CMSFieldName="Title" WillBeUploaded="true" MaximumLength="600" IsDCTerms="false" DnxType="" ProvenanceEventOutcome="false" DataFieldDescription="Title" DataFieldName="CMSDescription" SavedWithTemplate="false" PopulatedFromCMS="true"/>
   <Documentation>To edit this file, use Indigo.exe /MetaData</Documentation>
-  <MetaData objectName="2" DcType="" DataType="Text" AllowsMultipleRows="false" SortOrder="2" IsCMSSystem="false" DefaultValue="" IsCompulsory="true" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="true" IsDNX="true" DnxSubType="system" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="CMS" ProvenanceEventOutcome="false" DataFieldDescription="CMS System" DataFieldName="CMSSystem" SavedWithTemplate="true" PopulatedFromCMS="false"/>
-  <MetaData objectName="1" DcType="" DataType="Text" AllowsMultipleRows="false" SortOrder="1" IsCMSSystem="false" DefaultValue="" IsCompulsory="true" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="true" IsDNX="true" DnxSubType="recordId" CMSFieldName="Id" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="CMS" ProvenanceEventOutcome="false" DataFieldDescription="CMS Identifier" DataFieldName="CMSIdentifier" SavedWithTemplate="false" PopulatedFromCMS="true"/>
-  <MetaData objectName="7" DcType="" DataType="MultiSelect" AllowsMultipleRows="false" SortOrder="7" IsCMSSystem="false" DefaultValue="" IsCompulsory="true" DcTermsType="" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="false" IsDNX="true" DnxSubType="submissionReason" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="generalIECharacteristics" ProvenanceEventOutcome="false" DataFieldDescription="Submission Reason" DataFieldName="SubmissionReason" SavedWithTemplate="true" PopulatedFromCMS="false">
-    <ListValues objectName="Pictures_Online" Value="Pictures_Online" SortOrder="2" Display="Pictures Online"/>
-    <ListValues objectName="Copying_Programme" Value="Copying_Programme" SortOrder="1" Display="Copying Programme"/>
-    <ListValues objectName="Public_Order" Value="Public_Order" SortOrder="0" Display="Public Order"/>
-  </MetaData>
-  <MetaData objectName="6" DcType="" DataType="MultiSelect" AllowsMultipleRows="false" SortOrder="6" IsCMSSystem="false" DefaultValue="" IsCompulsory="true" DcTermsType="" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="false" IsDNX="true" DnxSubType="hardwareUsed" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="generalRepCharacteristics" ProvenanceEventOutcome="false" DataFieldDescription="Capture System" DataFieldName="Source" SavedWithTemplate="true" PopulatedFromCMS="false">
-    <ListValues objectName="Nikon_Super_Coolscan_5000_ED_scanner" Value="Nikon_Super_Coolscan_5000_ED_scanner" SortOrder="7" Display="Nikon Super Coolscan 5000 ED Scanner"/>
-    <ListValues objectName="HMIF_Cruse_Scanner" Value="HMIF_Cruse_Scanner" SortOrder="5" Display="HMIF Cruse Scanner"/>
-    <ListValues objectName="Fuji_Lanovia_Quattro_scanner" Value="Fuji_Lanovia_Quattro_scanner" SortOrder="3" Display="Fuji Lanovia Quattro scanner"/>
-    <ListValues objectName="Betterlight_Super8K_Scanner" Value="Betterlight_Super8K_Scanner" SortOrder="0" Display="Betterlight Super8K - Scanning Back"/>
-    <ListValues objectName="Nikon_D80_camera" Value="Nikon_D80_camera" SortOrder="6" Display="Nikon D80 camera"/>
-    <ListValues objectName="Heidelberg_Nexscan_F4100_scanner" Value="Heidelberg_Nexscan_F4100_scanner" SortOrder="4" Display="Heidelberg Nexscan F4100 scanner"/>
-    <ListValues objectName="N/A" Value="N/A" SortOrder="10" Display="N/A"/>
-    <ListValues objectName="Zeutschel_OS_12000" Value="Zeutschel_OS_12000" SortOrder="8" Display="Zeutschel OS 12000"/>
-    <ListValues objectName="Canon_5D_camera" Value="Canon_5D_camera" SortOrder="1" Display="Canon 5D camera"/>
-    <ListValues objectName="Epson_V700_scanner" Value="Epson_V700_scanner" SortOrder="2" Display="Epson V700 scanner"/>
-    <ListValues objectName="Phase_One_Camera" Value="Phase_One_Camera" SortOrder="9" Display="Phase One Camera"/>
-  </MetaData>
-  <MetaData objectName="5" DcType="" DataType="MultiSelect" AllowsMultipleRows="false" SortOrder="5" IsCMSSystem="false" DefaultValue="" IsCompulsory="true" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="false" IsDNX="true" DnxSubType="policyId" CMSFieldName="Rights" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="accessRightsPolicy" ProvenanceEventOutcome="false" DataFieldDescription="Access Restriction" DataFieldName="AccessRestriction" SavedWithTemplate="true" PopulatedFromCMS="true">
+  <MetaData objectName="1" IsCompulsory="true" PopulatedFromCMS="true" IsCMSID="false" IsDCTerms="false" CMSFieldName="Id" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="CMSIdentifier" DefaultValue="" IsSetBySystem="true" MaximumLength="100" DataType="Text" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="CMS Identifier" DataFieldValue="" SavedWithTemplate="false" SortOrder="1" IsCmsDescription="false" DnxType="CMS" DnxSubType="recordId" IsVisible="true" IsDNX="true" IsCustomizable="false"/>
+  <MetaData objectName="2" IsCompulsory="true" PopulatedFromCMS="false" IsCMSID="false" IsDCTerms="false" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="CMSSystem" DefaultValue="" IsSetBySystem="true" MaximumLength="100" DataType="Text" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="CMS System" DataFieldValue="" SavedWithTemplate="true" SortOrder="2" IsCmsDescription="false" DnxType="CMS" DnxSubType="system" IsVisible="true" IsDNX="true" IsCustomizable="false"/>
+  <MetaData objectName="3" IsCompulsory="true" PopulatedFromCMS="true" IsCMSID="false" IsDCTerms="false" CMSFieldName="Title" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="CMSDescription" DefaultValue="" IsSetBySystem="false" MaximumLength="600" DataType="Text" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="title" DataFieldDescription="Title" DataFieldValue="" SavedWithTemplate="false" SortOrder="3" IsCmsDescription="false" DnxType="" DnxSubType="" IsVisible="true" IsDNX="false" IsCustomizable="false"/>
+  <MetaData objectName="4" IsCompulsory="false" PopulatedFromCMS="true" IsCMSID="false" IsDCTerms="false" CMSFieldName="Reference" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="ReferenceNumber" DefaultValue="" IsSetBySystem="true" MaximumLength="100" DataType="Text" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="identifier" DataFieldDescription="Reference Number" DataFieldValue="" SavedWithTemplate="false" SortOrder="4" IsCmsDescription="false" DnxType="" DnxSubType="" IsVisible="true" IsDNX="false" IsCustomizable="false"/>
+    <MetaData objectName="5" DcType="" DataType="MultiSelect" AllowsMultipleRows="false" SortOrder="5" IsCMSSystem="false" DefaultValue="" IsCompulsory="true" DcTermsType="" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="false" IsDNX="true" DnxSubType="policyId" CMSFieldName="Rights" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="accessRightsPolicy" ProvenanceEventOutcome="false" DataFieldDescription="Access Restriction" DataFieldName="AccessRestriction" IsCustomizable="false" SavedWithTemplate="true" PopulatedFromCMS="true">
     <ListValues objectName="300" Value="300" SortOrder="2" Display="Unpublished-Restricted by location">
       <ListValues objectName="Access to the abstract is unrestricted">Access to the abstract is unrestricted</ListValues>
+      <ListValues objectName="Partly restricted - Digital content available only in Katherine Mansfield Reading Room">Partly restricted - Digital content available only in Katherine Mansfield Reading Room</ListValues>
       <ListValues objectName="Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms.">Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms.</ListValues>
       <ListValues objectName="Access to this item is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms">Access to this item is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms</ListValues>
       <ListValues objectName="Access to the interview is unrestricted">Access to the interview is unrestricted</ListValues>
@@ -34,8 +18,10 @@
     </ListValues>
     <ListValues objectName="200" Value="200" SortOrder="1" Display="Published-restricted"/>
     <ListValues objectName="400" Value="400" SortOrder="3" Display="Unpublished-Restricted by Person">
+      <ListValues objectName="Partly restricted - Curator required">Partly restricted - Curator required</ListValues>
       <ListValues objectName="Access to the interview requires the written permission of both the interviewee and donor">Access to the interview requires the written permission of both the interviewee and donor</ListValues>
       <ListValues objectName="Access to the interview requires written permission of the interviewee">Access to the interview requires written permission of the interviewee</ListValues>
+      <ListValues objectName="Restricted - Content cannot be accessed without permission">Restricted - Content cannot be accessed without permission</ListValues>
       <ListValues objectName="Access to the interview requires the permission of the Curator of the Oral History Centre">Access to the interview requires the permission of the Curator of the Oral History Centre</ListValues>
       <ListValues objectName="Restricted - Once permission is granted the digital object can only be viewed in Alexander Turnbull Library reading rooms">Restricted - Once permission is granted the digital object can only be viewed in Alexander Turnbull Library reading rooms</ListValues>
       <ListValues objectName="Restricted">Restricted</ListValues>
@@ -44,6 +30,7 @@
       <ListValues objectName="T5">T5</ListValues>
       <ListValues objectName="Access to the collection is unrestricted but individual interviews may be restricted">Access to the collection is unrestricted but individual interviews may be restricted</ListValues>
       <ListValues objectName="Access to the interview requires written permission of the donor">Access to the interview requires written permission of the donor</ListValues>
+      <ListValues objectName="Restricted - Not able to be requested">Restricted - Not able to be requested</ListValues>
       <ListValues objectName="Access to the tape requires the written permission of the donor">Access to the tape requires the written permission of the donor</ListValues>
       <ListValues objectName="Original may be viewed with permission of private owner">Original may be viewed with permission of private owner</ListValues>
       <ListValues objectName="Access to the collection requires written permission of the donor">Access to the collection requires written permission of the donor</ListValues>
@@ -53,20 +40,40 @@
       <ListValues objectName="UR">UR</ListValues>
       <ListValues objectName="Partial restriction">Partial restriction</ListValues>
       <ListValues objectName="Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms">Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms</ListValues>
+      <ListValues objectName="Partly restricted - Please use surrogate in place of original">Partly restricted - Please use surrogate in place of original</ListValues>
       <ListValues objectName="Not restricted">Not restricted</ListValues>
       <ListValues objectName="Access to digital object is unrestricted">Access to digital object is unrestricted</ListValues>
+      <ListValues objectName="No Access Restrictions">No Access Restrictions</ListValues>
       <ListValues objectName="Unrestricted">Unrestricted</ListValues>
     </ListValues>
   </MetaData>
-  <MetaData objectName="4" DcType="identifier" DataType="Text" AllowsMultipleRows="false" SortOrder="4" IsCMSSystem="false" DefaultValue="" IsCompulsory="false" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="true" IsDNX="false" DnxSubType="" CMSFieldName="Reference" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="" ProvenanceEventOutcome="false" DataFieldDescription="Reference Number" DataFieldName="ReferenceNumber" SavedWithTemplate="false" PopulatedFromCMS="true"/>
-  <MetaData objectName="9" DcType="" DataType="Text" AllowsMultipleRows="false" SortOrder="9" IsCMSSystem="false" DefaultValue="DigitisedImageIE" IsCompulsory="true" IsCmsDescription="false" IsCMSID="false" IsVisible="false" DataFieldValue="" IsSetBySystem="false" IsDNX="true" DnxSubType="IEEntityType" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="generalIECharacteristics" ProvenanceEventOutcome="false" DataFieldDescription="Entity Type" DataFieldName="EntityType" SavedWithTemplate="true" PopulatedFromCMS="false"/>
-  <MetaData objectName="8" DcType="" DataType="MultiSelect" AllowsMultipleRows="false" SortOrder="8" IsCMSSystem="false" DefaultValue="" IsCompulsory="true" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="false" IsDNX="true" DnxSubType="physicalCarrierMedia" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="generalRepCharacteristics" ProvenanceEventOutcome="false" DataFieldDescription="Source Type" DataFieldName="SourceType" SavedWithTemplate="true" PopulatedFromCMS="false">
-    <ListValues objectName="Colour Transparency" Value="Colour Transparency" SortOrder="2" Display="Colour Transparency"/>
-    <ListValues objectName="OriginalArt" Value="OriginalArt" SortOrder="4" Display="Original Art"/>
-    <ListValues objectName="Print-photographic" Value="Print-photographic" SortOrder="0" Display="Print-photographic"/>
-    <ListValues objectName="Negative-photographic" Value="Negative-photographic" SortOrder="3" Display="Negative-photographic"/>
+  <MetaData objectName="6" IsCompulsory="true" PopulatedFromCMS="false" IsCMSID="false" IsDCTerms="false" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="Source" DefaultValue="" IsSetBySystem="false" MaximumLength="100" DataType="MultiSelect" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="Capture System" DataFieldValue="" SavedWithTemplate="true" SortOrder="6" DcTermsType="" IsCmsDescription="false" DnxType="generalRepCharacteristics" DnxSubType="hardwareUsed" IsVisible="true" IsDNX="true" IsCustomizable="true">
+    <ListValues objectName="Canon_5D_Mark_II_Camera" Value="Canon_5D_Mark_II_Camera" SortOrder="6" Display="Canon 5D Mark II Camera"/>
+    <ListValues objectName="Epson_V700_scanner" Value="Epson_V700_scanner" SortOrder="3" Display="Epson V700 scanner"/>
+    <ListValues objectName="N/A" Value="N/A" SortOrder="7" Display="N/A"/>
+    <ListValues objectName="Fuji_Lanovia_Quattro_scanner" Value="Fuji_Lanovia_Quattro_scanner" SortOrder="9" Display="Fuji Lanovia Quattro scanner"/>
+    <ListValues objectName="Canon_5D_Mark_III_camera" Value="Canon_5D_Mark_III_camera" SortOrder="1" Display="Canon 5D Mark III Camera"/>
+    <ListValues objectName="Nikon_D800" Value="Nikon_D800" SortOrder="2" Display="Nikon D800"/>
+    <ListValues objectName="HMIF_Cruse_Scanner" Value="HMIF_Cruse_Scanner" SortOrder="10" Display="HMIF Cruse Scanner"/>
+    <ListValues objectName="Nikon_Super_Coolscan_5000_ED_scanner" Value="Nikon_Super_Coolscan_5000_ED_scanner" SortOrder="4" Display="Nikon Super Coolscan 5000 ED Scanner"/>
+    <ListValues objectName="Zeutschel_OS_12000" Value="Zeutschel_OS_12000" SortOrder="5" Display="Zeutschel OS 12000"/>
+    <ListValues objectName="Phase_One_IQ180_Camera" Value="Phase_One_IQ180_Camera" SortOrder="0" Display="Phase One IQ180 Camera"/>
+    <ListValues objectName="Betterlight_Super8K_Scanner" Value="Betterlight_Super8K_Scanner" SortOrder="8" Display="Betterlight Super8K - Scanning Back"/>
+  </MetaData>
+  <MetaData objectName="7" IsCompulsory="true" PopulatedFromCMS="false" IsCMSID="false" IsDCTerms="false" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="SubmissionReason" DefaultValue="" IsSetBySystem="false" MaximumLength="100" DataType="MultiSelect" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="Submission Reason" DataFieldValue="" SavedWithTemplate="true" SortOrder="7" DcTermsType="" IsCmsDescription="false" DnxType="generalIECharacteristics" DnxSubType="submissionReason" IsVisible="true" IsDNX="true" IsCustomizable="false">
+    <ListValues objectName="Copying_Programme" Value="Copying_Programme" SortOrder="1" Display="Copying Programme"/>
+    <ListValues objectName="Public_Order" Value="Public_Order" SortOrder="0" Display="Public Order"/>
+    <ListValues objectName="Pictures_Online" Value="Pictures_Online" SortOrder="2" Display="Pictures Online"/>
+    <ListValues objectName="Maps_Digitisation" Value="Maps_Digitisation" SortOrder="3" Display="Maps Digitisation"/>
+  </MetaData>
+  <MetaData objectName="8" IsCompulsory="true" PopulatedFromCMS="false" IsCMSID="false" IsDCTerms="false" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="SourceType" DefaultValue="" IsSetBySystem="false" MaximumLength="100" DataType="MultiSelect" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="Source Type" DataFieldValue="" SavedWithTemplate="true" SortOrder="8" IsCmsDescription="false" DnxType="generalRepCharacteristics" DnxSubType="physicalCarrierMedia" IsVisible="true" IsDNX="true" IsCustomizable="false">
     <ListValues objectName="Manuscript" Value="Manuscript" SortOrder="1" Display="Manuscript"/>
+    <ListValues objectName="Print-photographic" Value="Print-photographic" SortOrder="0" Display="Print-photographic"/>
+    <ListValues objectName="Colour Transparency" Value="Colour Transparency" SortOrder="2" Display="Colour Transparency"/>
     <ListValues objectName="PrintedWorks" Value="PrintedWorks" SortOrder="6" Display="Printed Works"/>
     <ListValues objectName="Microfilm" Value="Microfilm" SortOrder="5" Display="Microfilm"/>
+    <ListValues objectName="Negative-photographic" Value="Negative-photographic" SortOrder="3" Display="Negative-photographic"/>
+    <ListValues objectName="OriginalArt" Value="OriginalArt" SortOrder="4" Display="Original Art"/>
   </MetaData>
+  <MetaData objectName="9" IsCompulsory="true" PopulatedFromCMS="false" IsCMSID="false" IsDCTerms="false" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="EntityType" DefaultValue="DigitisedImageIE" IsSetBySystem="false" MaximumLength="100" DataType="Text" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="Entity Type" DataFieldValue="" SavedWithTemplate="true" SortOrder="9" DcTermsType="" IsCmsDescription="false" DnxType="generalIECharacteristics" DnxSubType="IEEntityType" IsVisible="true" IsDNX="true" IsCustomizable="false"/>
 </MetaData>

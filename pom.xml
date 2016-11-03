@@ -3,7 +3,7 @@
 	<groupId>nz.govt.natlib.ndha.manualdeposit</groupId>
 	<artifactId>ManualDeposit</artifactId>
 	<packaging>jar</packaging>
-	<version>2.9</version>
+	<version>3.0</version>
 	<name>ManualDeposit</name>
 	<url>http://maven.apache.org</url>
 
@@ -12,7 +12,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-
+	
 	<dependencies>
 
 		<!-- this is a runtime dependency, but it needs to be declared so that 
@@ -20,19 +20,19 @@
 		<dependency>
 			<groupId>nz.govt.natlib.ndha.exlibrismetswriter</groupId>
 			<artifactId>ExLibrisMetsWriter</artifactId>
-			<version>2.9</version>
+			<version>3.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>nz.govt.natlib.ndha.common</groupId>
 			<artifactId>Common</artifactId>
-			<version>2.9</version>
+			<version>3.0</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>nz.govt.natlib.ndha.srusearchclient</groupId>
 			<artifactId>srusearchclient</artifactId>
-			<version>1.13</version>
+			<version>1.14</version>
 		</dependency>
 		
         <dependency>
@@ -41,7 +41,7 @@
             <version>2.0.5</version>
         </dependency>
         
-        <dependency>
+<!--         <dependency>
             <groupId>activation</groupId>
             <artifactId>activation</artifactId>
             <version>1.1</version>
@@ -51,7 +51,7 @@
             <groupId>avalon-framework</groupId>
             <artifactId>avalon-framework</artifactId>
             <version>4.1.3</version>
-        </dependency> 
+        </dependency>  -->
         
         <dependency>
             <groupId>commons-beanutils</groupId>
@@ -65,11 +65,11 @@
             <version>1.10</version>
         </dependency> 
         
-        <dependency>
+<!--         <dependency>
             <groupId>commons-httpclient</groupId>
             <artifactId>commons-httpclient</artifactId>
             <version>3.1</version>
-        </dependency> 
+        </dependency> --> 
         
         <dependency>
             <groupId>commons-lang</groupId>
@@ -92,7 +92,7 @@
         <dependency>
             <groupId>com.exlibris.dps</groupId>
             <artifactId>DepositWS</artifactId>
-            <version>4.0</version>
+            <version>5.0</version>
         </dependency> 
         
         <dependency>
@@ -114,7 +114,7 @@
         <dependency>
             <groupId>com.exlibris</groupId>
             <artifactId>dps-sdk</artifactId>
-            <version>5.0.0</version>
+            <version>5.0.1</version>
         </dependency> 
         
         <dependency>
@@ -142,11 +142,11 @@
 			<scope>compile</scope>
 		</dependency> 
         
-        <dependency>
+<!--         <dependency>
             <groupId>commons-jaxen</groupId>
             <artifactId>jaxen</artifactId>
             <version>1.1.6</version>
-        </dependency>
+        </dependency> -->
         
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -154,6 +154,18 @@
 			<version>1.1</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.4.5</version>
+		</dependency>			
 		
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -224,11 +236,11 @@
 	        <version>1.2.17</version>
 	    </dependency>         
         
-        <dependency>
+<!--         <dependency>
             <groupId>logkit</groupId>
             <artifactId>logkit</artifactId>
             <version>1.0.1</version>
-        </dependency>
+        </dependency> -->
         
         <dependency>
             <groupId>mail</groupId>
@@ -257,7 +269,7 @@
         <dependency>
             <groupId>gov.loc.mets</groupId>
             <artifactId>metsxmlbeans</artifactId>
-            <version>1.7</version>
+            <version>1.8</version>
         </dependency>
         
         <dependency>
@@ -266,28 +278,28 @@
             <version>2.0.8</version>
         </dependency>
         
-        <dependency>
+<!--         <dependency>
             <groupId>policy</groupId>
             <artifactId>policy</artifactId>
             <version>4.2.2.GA</version>
-        </dependency>
+        </dependency> -->
         
         <dependency>
             <groupId>com.exlibris.dps</groupId>
             <artifactId>ProducerWS</artifactId>
-            <version>4.0</version>
+            <version>5.0</version>
         </dependency>
         
-        <dependency>
+<!--         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
-        </dependency>
+        </dependency> -->
         
         <dependency>
             <groupId>com.exlibris.dps</groupId>
             <artifactId>SipWS</artifactId>
-            <version>4.0</version>
+            <version>5.0</version>
         </dependency>
         
         <dependency>
@@ -343,11 +355,11 @@
             <version>1.4.01</version>
         </dependency>
         
-        <dependency>
+<!--         <dependency>
             <groupId>xmlpublic</groupId>
             <artifactId>xmlpublic</artifactId>
             <version>2.3.0</version>
-        </dependency>
+        </dependency> -->
         
 		<dependency>
 			<groupId>org.jmock</groupId>
@@ -371,7 +383,7 @@
 			<scope>test</scope>
 		</dependency>
 		
-        <dependency>
+<!--         <dependency>
             <groupId>junit-addons</groupId>
             <artifactId>junit-addons</artifactId>
             <version>1.4</version>
@@ -388,7 +400,7 @@
                 </exclusion>
 
             </exclusions>
-        </dependency>
+        </dependency> -->
 	</dependencies>
 
 	<build>
@@ -430,18 +442,21 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5.3</version>
 			</plugin>
-			<!-- Maven Compiler Plugin using Java 1.7 -->
+
+			<!-- Maven Compiler Plugin using Java 1.8 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5</version>
+				<version>3.5.1</version>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -456,6 +471,7 @@
 					</archive>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
@@ -479,6 +495,7 @@
 						</property> </systemProperties> -->
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<version>1.8</version>

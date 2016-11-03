@@ -63,8 +63,8 @@ public class CMSSearchResultsPresenter {
 	private int theStartRecord = 1;
 	private static final int RECORDS_PER_PAGE = 10;
 	private static final int SEARCH_TIMEOUT = 5000;
-	private final static Log LOG = LogFactory
-			.getLog(CMSSearchResultsPresenter.class);
+	private final static Log LOG = LogFactory.getLog(CMSSearchResultsPresenter.class);
+	private String searchSchema = "dps";
 
 	public CMSSearchResultsPresenter(final ICMSSearchResults frame,
 			final List<SearchAttributeDetail> attributes,
@@ -133,12 +133,17 @@ public class CMSSearchResultsPresenter {
 				.get(0).getAttribute(), searchAttributes.get(0)
 				.getAttributeName(), charEncode(searchAttributes.get(0)
 				.getValue()));
+		
+		if (theSearchType.equals(ILSQueryType.eServerType.CMS1)) {
+			searchSchema = "dc";
+		}else{
+			searchSchema = "dps";
+		}
+		
 		try {
 			if (searchAttributes.size() == 1) {
 				cmsResults = search.runQuery(criteria, theSearchType,
-						theStartRecord, RECORDS_PER_PAGE, SEARCH_TIMEOUT,
-						applicationProperties.getApplicationData()
-								.getSruSearchSchema());
+						theStartRecord, RECORDS_PER_PAGE, SEARCH_TIMEOUT, searchSchema, applicationProperties.getSysProxyUser(), applicationProperties.getSysProxyPassword());
 			} else {
 				SingleCriteria criteria2 = new SingleCriteria(searchAttributes
 						.get(1).getAttribute(), searchAttributes.get(1)
@@ -154,9 +159,7 @@ public class CMSSearchResultsPresenter {
 							compositeCriteria, criteria2);
 				}
 				cmsResults = search.runQuery(compositeCriteria, theSearchType,
-						theStartRecord, RECORDS_PER_PAGE, SEARCH_TIMEOUT,
-						applicationProperties.getApplicationData()
-								.getSruSearchSchema());
+						theStartRecord, RECORDS_PER_PAGE, SEARCH_TIMEOUT, searchSchema, applicationProperties.getSysProxyUser(), applicationProperties.getSysProxyPassword());
 			}
 		} catch (Exception ex) {
 			if (ex.getCause() instanceof java.net.SocketTimeoutException) {
@@ -272,13 +275,20 @@ public class CMSSearchResultsPresenter {
 
 	public void selectRecord() {
 		if (theResultsTable.getSelectedRow() >= 0) {
-			final CmsRecord rec = theResultsTableModel.getRow(theResultsTable
-					.getSelectedRow());
+			final CmsRecord rec = theResultsTableModel.getRow(theResultsTable.getSelectedRow());
 			MetaDataFields.ECMSSystem system;
 			if (theSearchType.equals(ILSQueryType.eServerType.CMS2)) {
 				system = MetaDataFields.ECMSSystem.CMS2;
 			} else {
-				system = MetaDataFields.ECMSSystem.CMS1;
+				if (manualDepositParent.isStaffMediated()){
+					system = MetaDataFields.ECMSSystem.StaffMediated;
+				} else if (manualDepositParent.isNoCMS()) {
+					system = MetaDataFields.ECMSSystem.NoSystem;
+				} else if (manualDepositParent.isCMS2()){
+					system = MetaDataFields.ECMSSystem.CMS2;
+				}else {
+					system = MetaDataFields.ECMSSystem.CMS1;
+				}
 			}
 			manualDepositParent.setCMSResults(rec, system);
 			searchFrame.closeForm();

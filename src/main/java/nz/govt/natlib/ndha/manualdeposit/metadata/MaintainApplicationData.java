@@ -22,13 +22,13 @@
 
 package nz.govt.natlib.ndha.manualdeposit.metadata;
 
-import javax.swing.JOptionPane;
-import nz.govt.natlib.ndha.common.guiutilities.FormControl;
-import javax.swing.JLabel;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JTextField;
+
+import nz.govt.natlib.ndha.common.guiutilities.FormControl;
 
 public class MaintainApplicationData extends javax.swing.JPanel {
 

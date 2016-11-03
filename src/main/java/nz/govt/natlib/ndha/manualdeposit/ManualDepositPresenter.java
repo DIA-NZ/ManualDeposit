@@ -23,6 +23,7 @@
 package nz.govt.natlib.ndha.manualdeposit;
 
 import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.DisplayMode;
 import java.awt.Font;
 import java.awt.Frame;
@@ -56,6 +57,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.swing.DefaultCellEditor;
 import javax.swing.DefaultListModel;
@@ -148,6 +151,7 @@ import nz.govt.natlib.ndha.manualdeposit.metadata.MetaDataTableModel;
 import nz.govt.natlib.ndha.manualdeposit.metadata.MetaDataTypeImpl;
 import nz.govt.natlib.ndha.manualdeposit.metadata.PersonalSettings;
 import nz.govt.natlib.ndha.manualdeposit.metadata.UserGroupData;
+import nz.govt.natlib.ndha.manualdeposit.metadata.UserGroupData.UserGroupDesc;
 import nz.govt.natlib.ndha.manualdeposit.provenanceevent.ProvenanceEvent;
 import nz.govt.natlib.ndha.manualdeposit.provenanceevent.ProvenanceEventsEditorView;
 import nz.govt.natlib.ndha.manualdeposit.provenanceevent.ProvenanceEventsPresenter;
@@ -232,6 +236,9 @@ public class ManualDepositPresenter implements Serializable,
 	private final static String ERROR_OCCURRED = "An error has occurred";
 	private SearchAttributeController searchAttributes;
 	private boolean customizeMetaData = false;
+	private boolean isStaffMediated = false;
+	private boolean isNoCMS = false;
+	private boolean isCMS2 = false;
 	// These were used for performance improvements - leave for now in case
 	// other problems surface
 	// private long _loadChildrenTime = 0;
@@ -316,6 +323,12 @@ public class ManualDepositPresenter implements Serializable,
 	private void processLogin(final String userName, final String password) {
 		try {
 			applicationProperties.setLoggedOnUser(userName);
+			if (userName.equals(System.getProperty("user.name"))){
+				applicationProperties.setSysProxyUser(userName);
+			} else {
+				applicationProperties.setSysProxyUser(System.getProperty("user.name"));
+			}
+			applicationProperties.setSysProxyPassword(password);
 		} catch (Exception ex) {
 			manualDepositFrame.showError("Could not log on",
 					"An error has occurred\n" + ex.getMessage());
@@ -323,6 +336,7 @@ public class ManualDepositPresenter implements Serializable,
 			return;
 		}
 		applicationProperties.setLoggedOnUserPassword(password);
+		
 		try {
 			userGroupData = applicationProperties.getUserData().getUser(
 					applicationProperties.getLoggedOnUser()).getUserGroupData();
@@ -357,7 +371,9 @@ public class ManualDepositPresenter implements Serializable,
 		manualDepositFrame.showView();
 		LOG.debug("loginSucceeded, before load producers list");
 		if (showProducers()) {
-			loadProducersList();
+			if (!userGroupData.getUserGroupDesc().equals(UserGroupDesc.Published)){
+				loadProducersList();
+			}
 		}
 		LOG.debug("loginSucceeded, end");
 		setupJobQueue();
@@ -463,6 +479,7 @@ public class ManualDepositPresenter implements Serializable,
 		customizeMetaDataTableModel = new CustomizeMetaDataTableModel();
 		clearTemplate();
 		loadTemplate();
+		resetRadioButtons();
 		final String currentPath = applicationProperties.getApplicationData()
 				.getPersonalSettings().getCurrentPath();
 		loadPath(currentPath);
@@ -656,6 +673,38 @@ public class ManualDepositPresenter implements Serializable,
 
 	public void setCustomizeMetaData(boolean customizeMetaData) {
 		this.customizeMetaData = customizeMetaData;
+	}
+	
+	public boolean isCMS2() {
+		return isCMS2;
+	}
+
+	public void setIsCMS2(boolean isCMS2) {
+		this.isCMS2 = isCMS2;
+		
+	}
+	
+	public boolean isStaffMediated() {
+		return isStaffMediated;
+	}
+
+	public void setStaffMediated(boolean isStaffMediated) {
+		this.isStaffMediated = isStaffMediated;
+	}
+	
+	public boolean isNoCMS() {
+		return isNoCMS;
+	}
+
+	public void setNoCMS(boolean isNoCMS) {
+		this.isNoCMS = isNoCMS;
+		
+	}
+	
+	public void resetRadioButtons(){
+		setIsCMS2(false);
+		setStaffMediated(false);
+		setNoCMS(false);
 	}
 
 	public JPopupMenu getJobQueueMenu(final JTable table) {
@@ -3216,11 +3265,19 @@ public class ManualDepositPresenter implements Serializable,
 	public void openFile(DefaultMutableTreeNode node) {
 		if (node.getUserObject() instanceof FileSystemObject) {
 			FileSystemObject fso = (FileSystemObject) node.getUserObject();
+			
 			if (fso.getIsFile()) {
 				try {
-					Runtime.getRuntime().exec(
-							"rundll32 SHELL32.DLL,ShellExec_RunDLL "
-									+ fso.getFile().getAbsolutePath());
+					String fileName = fso.getFile().getAbsolutePath();
+					fileName = fileName.substring(fileName.lastIndexOf(File.separator)+1);
+					Pattern pattern = Pattern.compile("\\s{2,}");
+					Matcher matcher = pattern.matcher(fileName);
+					if (matcher.find()){
+						Desktop.getDesktop().open(fso.getFile());
+					}else{
+						Runtime.getRuntime().exec("rundll32 SHELL32.DLL,ShellExec_RunDLL "
+										+ fso.getFile().getAbsolutePath());
+					}
 				} catch (Exception ex) {
 					String message = "Could not open file "
 							+ fso.getDescription();
@@ -3237,8 +3294,15 @@ public class ManualDepositPresenter implements Serializable,
 			FileSystemObject fso = (FileSystemObject) node.getUserObject();
 			if (fso.getIsFile()) {
 				try {
-					Runtime.getRuntime().exec("explorer.exe /select," + fso.getFile().getAbsolutePath());
-					//Desktop.getDesktop().open(new File(fso.getFullPathNoFileName()));
+					String fileName = fso.getFile().getAbsolutePath();
+					fileName = fileName.substring(fileName.lastIndexOf(File.separator)+1);
+					Pattern pattern = Pattern.compile("\\s{2,}");
+					Matcher matcher = pattern.matcher(fileName);
+					if (matcher.find()){
+						Desktop.getDesktop().open(new File(fso.getFullPathNoFileName()));
+					}else{
+						Runtime.getRuntime().exec("explorer.exe /select," + fso.getFile().getAbsolutePath());
+					}
 				} catch (Exception ex) {
 					String message = "Could not open file location " + fso.getDescription();
 					manualDepositFrame.showError("Could not open file location", message, ex);
@@ -4711,11 +4775,16 @@ public class ManualDepositPresenter implements Serializable,
 			}
 			metaDataTableModel.clearTableData();
 			try {
-				if (userGroupData.getUserGroupDesc().name().equals("StaffMediated")){
+				if (userGroupData.getUserGroupDesc().equals(UserGroupDesc.StaffMediated)){
 					cmsSystem = MetaDataFields.ECMSSystem.StaffMediated;
 					metaDataTableModel.getMetaData().setCMSSystem(applicationProperties.getApplicationData()
 							.getCMSSystemText(cmsSystem));
-				}else {
+				} else if (userGroupData.getUserGroupDesc().equals(UserGroupDesc.Published)){
+					cmsSystem = MetaDataFields.ECMSSystem.CMS2;
+				} else if (userGroupData.getUserGroupDesc().equals(UserGroupDesc.Digitisation) || userGroupData.getUserGroupDesc().equals(UserGroupDesc.Sound)
+						|| userGroupData.getUserGroupDesc().equals(UserGroupDesc.Video)){
+					cmsSystem = MetaDataFields.ECMSSystem.CMS1;
+				} else {
 					cmsSystem = metaDataTableModel.getMetaData().getCMSSystemType();
 				}
 			} catch (InvalidApplicationDataException appEx) {
@@ -4787,7 +4856,7 @@ public class ManualDepositPresenter implements Serializable,
 				//Refresh the metadata if the usergroup is NOT 'StaffMediated' and if not using CMS systems for StaffMediated deposits.
 					//If Usergroup description is not there in usergroup data xml then it defaults to 'None'.
 				String userGroup = userGroupData.getUserGroupDesc().name();
-				String currentCMSId = metaDataTableModel.getMetaData().getCMSID();
+				String currentCMSId = metaDataTableModel.getMetaData().getCMSID(cmsSystem.name());
 				if (!userGroup.equals("StaffMediated")){
 					try {
 						metaDataTableModel.setMetaDataType(cmsSystem);
@@ -4853,25 +4922,24 @@ public class ManualDepositPresenter implements Serializable,
 								.confirm("The following fields will be overwritten\n"
 										+ fieldsOverwritten
 										+ "\nDo you wish to continue?"))) {
-					// First make sure we have the right meta data loaded, then
-					// clear it
+					// First make sure we have the right meta data loaded, then clear it
 					XMLObject cmsSystemObj = null;
 					for (XMLObject object : template.getChildObjects()) {
-						if (object.getObjectType()
-								.equalsIgnoreCase("CMSSystem")) {
+						if (object.getObjectType().equalsIgnoreCase("CMSSystem") || object.getObjectType().equalsIgnoreCase("objectIdentifierType")) {
 							cmsSystemObj = object;
 							break;
 						}
 					}
 					MetaDataFields.ECMSSystem cmsSystem = MetaDataFields.ECMSSystem.NoSystem;
 					if (cmsSystemObj != null) {
-						for (int i = 0; i < MetaDataFields.ECMSSystem.values().length; i++) {
-							if (ApplicationData.getInstance().getCMSSystemText(
-									MetaDataFields.ECMSSystem.values()[i])
-									.equalsIgnoreCase(
-											cmsSystemObj.getObjectValue())) {
-								cmsSystem = MetaDataFields.ECMSSystem.values()[i];
-								break;
+						if (cmsSystemObj.getObjectValue().equalsIgnoreCase("ALMAMMS")){
+							cmsSystem = MetaDataFields.ECMSSystem.CMS1;
+						} else {
+							for (int i = 0; i < MetaDataFields.ECMSSystem.values().length; i++) {
+								if (ApplicationData.getInstance().getCMSSystemText(MetaDataFields.ECMSSystem.values()[i]).equalsIgnoreCase(cmsSystemObj.getObjectValue())) {
+									cmsSystem = MetaDataFields.ECMSSystem.values()[i];
+									break;
+								}
 							}
 						}
 						changeMetaData(cmsSystem);
@@ -4969,8 +5037,7 @@ public class ManualDepositPresenter implements Serializable,
 		return metaDataOkay(metaData, checkSystemGeneratedItems);
 	}
 
-	public boolean metaDataOkay(MetaDataFields metaData,
-			boolean checkSystemGeneratedItems) {
+	public boolean metaDataOkay(MetaDataFields metaData, boolean checkSystemGeneratedItems) {
 		boolean dataOkay = true;
 		if (metaData == null || metaData.getMetaDataFields() == null) {
 			dataOkay = false;
@@ -4982,17 +5049,12 @@ public class ManualDepositPresenter implements Serializable,
 						&& (theType.getDataFieldValue() == null || theType
 								.getDataFieldValue().length() == 0)) {
 					try {
-						if ((!theType.getDataFieldName().equals(
-								metaData.getCMSIDAttributeName()))
-								|| ((!metaData.getCMSSystemType().equals(
-										MetaDataFields.ECMSSystem.NoSystem)) && (!metaData
-										.getCMSSystemType()
-										.equals(
-												MetaDataFields.ECMSSystem.StaffMediated)))) {
+						if ((!theType.getDataFieldName().equals(metaData.getCMSIDAttributeName()))
+								|| ((!metaData.getCMSSystemType().equals(MetaDataFields.ECMSSystem.NoSystem)) 
+										&& (!metaData.getCMSSystemType().equals(MetaDataFields.ECMSSystem.StaffMediated)))) {
 							boolean notSystemGeneratedOrCheckNotNeeded = checkSystemGeneratedItems;
 							if (!notSystemGeneratedOrCheckNotNeeded) {
-								notSystemGeneratedOrCheckNotNeeded = !theType
-										.getIsPopulatedFromCMS();
+								notSystemGeneratedOrCheckNotNeeded = !theType.getIsPopulatedFromCMS();
 							}
 							if (notSystemGeneratedOrCheckNotNeeded) {
 								dataOkay = false;
@@ -5260,13 +5322,18 @@ public class ManualDepositPresenter implements Serializable,
 		presenter.setupPresenter();
 	}
 
-	public void setCMSResults(CmsRecord rec, MetaDataFields metaData)
-			throws MetsException {
+	public void setCMSResults(CmsRecord rec, MetaDataFields metaData) throws MetsException {
 		for (IMetaDataTypeExtended data : metaData.getMetaDataFields()) {
 			if (data.getIsPopulatedFromCMS()) {
 				String value = "";
 				if (data.getCMSFieldName().equalsIgnoreCase("Id")) {
-					value = rec.getId();
+					
+					//If CMS is ALMA always populate alma_xxxx as MMS_ID in 'ObjectIdentitfierValue' metadata field. 
+					if (rec.getId() != null && rec.getId().contains("alma")){
+						value = getRecId(rec.getId());
+					}else{
+						value = rec.getId();
+					}
 				} else if (data.getCMSFieldName().equalsIgnoreCase("Title")) {
 					value = rec.getTitleStatement();
 				} else if (data.getCMSFieldName().equalsIgnoreCase("Publisher")) {
@@ -5275,11 +5342,9 @@ public class ManualDepositPresenter implements Serializable,
 					value = rec.getAuthorPersonal();
 				} else if (data.getCMSFieldName().equalsIgnoreCase("Reference")) {
 					value = rec.getReference();
-				} else if (data.getCMSFieldName().equalsIgnoreCase(
-						"Deposit Type")) {
+				} else if (data.getCMSFieldName().equalsIgnoreCase("Deposit Type")) {
 					value = rec.getDepositType();
-				} else if (data.getCMSFieldName().equalsIgnoreCase(
-						"Description")) {
+				} else if (data.getCMSFieldName().equalsIgnoreCase("Description")) {
 					value = rec.getDescription();
 				} else if (data.getCMSFieldName().equalsIgnoreCase("Coverage")) {
 					value = rec.getCoverage();
@@ -5320,6 +5385,25 @@ public class ManualDepositPresenter implements Serializable,
 			}
 		}
 	}
+	
+	private String getRecId(String recId){
+		String almaId = "";
+		Pattern pattern = Pattern.compile("alma_\\d+,*");
+		Matcher matcher = pattern.matcher(recId);
+		if (matcher.find()){
+			recId = matcher.group(0).replace("alma_", "");
+			if (recId.endsWith(",")){
+				almaId = recId.substring(0, recId.lastIndexOf(","));
+			} else {
+				almaId = recId;
+			}
+			
+		}else{
+			//should never reach here as almaId should never be an empty string.
+			almaId = "";
+		}
+		return almaId;
+	}
 
 	public void setCMSResults(CmsRecord rec, MetaDataFields.ECMSSystem cmsSystem) {
 		if (metaDataTableModel != null) {
@@ -5333,7 +5417,7 @@ public class ManualDepositPresenter implements Serializable,
 						ERROR_OCCURRED, ex);
 			}
 			MetaDataFields metaData = metaDataTableModel.getMetaData();
-			String cmsID = metaData.getCMSID();
+			String cmsID = metaData.getCMSID(cmsSystem.name());
 			String userGroup = userGroupData.getUserGroupDesc().name();
 			try {
 				if (userGroup.equals("StaffMediated")){
@@ -5349,8 +5433,7 @@ public class ManualDepositPresenter implements Serializable,
 					setCMSResults(rec, metaData);
 				}
 			} catch (Exception ex) {
-				manualDepositFrame.showError("Error setting CMS data",
-						ERROR_OCCURRED, ex);
+				manualDepositFrame.showError("Error setting CMS data", ERROR_OCCURRED, ex);
 			}
 			manualDepositFrame.checkButtons();
 		}
@@ -5371,18 +5454,20 @@ public class ManualDepositPresenter implements Serializable,
 		return retVal;
 	}
 
-	public boolean cmsIDExistsInDps(String cmsID, String cmsSystem)
-			throws Exception {
+	public boolean cmsIDExistsInDps(String cmsID, String cmsSystem, boolean isEmu) throws Exception {
 		boolean depositsExist = false;
 		SruService sruService = new SruServiceImpl();
 		SruRequest request = new SruRequestImpl();
-		request.setUrl(applicationProperties.getApplicationData()
-				.getDPSSearchUrl());
+		request.setUrl(applicationProperties.getApplicationData().getDPSSearchUrl());
 		request.setStartRecord(0);
 		request.setMaximumRecords(10);
 		request.setSchema("DC");
 		SimpleQuery query = new SimpleQuery();
-		query.addBasicCriteria("recordId=" + cmsID + " system=" + cmsSystem);
+		if (isEmu){
+			query.addBasicCriteria("recordId=" + cmsID + " system=" + cmsSystem);
+		} else {
+			query.addBasicCriteria("IE.objectIdentifier.objectIdentifierType.ALMAMMS=" + cmsID);
+		}
 		request.setQuery(query);
 		DcToHtmlTransformer transformer = new DcToHtmlTransformerImpl();
 		String xmlResult = sruService.execute(request);
@@ -5396,22 +5481,25 @@ public class ManualDepositPresenter implements Serializable,
 	private boolean existingDeposits() {
 		MetaDataFields metaData = metaDataTableModel.getMetaData();
 		boolean depositsExist = false;
+		String cmsID = "";
+		boolean isCMSSystem = metaData.getAt(1).getDataFieldName().equalsIgnoreCase("CMSSystem");
+		if (!isCMSSystem){
+			cmsID = metaData.getCMSID("CMS1");
+		} else {
+			cmsID = metaData.getCMSID("CMS2");
+		}
 		try {
-			if (metaData.getCMSID() == null ||metaData.getCMSID().trim().length() == 0){
+			if (cmsID == null || cmsID.trim().length() == 0){
 			return depositsExist;
 		}
 		long startTime =  System.currentTimeMillis();
-			depositsExist = cmsIDExistsInDps(metaData.getCMSID(), metaData
-					.getCMSSystem());
+			depositsExist = cmsIDExistsInDps(cmsID, metaData.getCMSSystem(), isCMSSystem);
 			LOG.info("Check CMS ID exists in DPS took "+ (System.currentTimeMillis() -  startTime)+ "milliseconds");
 			if (depositsExist) {
-				ContentExists contentExists = new ContentExists(
-						manualDepositFrame.getComponent(), true,
-						applicationProperties.getApplicationData()
-								.getSettingsPath(),
-						applicationProperties.getApplicationData()
-								.getContentAggregatorUrl(), metaData
-								.getCMSSystem(), metaData.getCMSID());
+				ContentExists contentExists = new ContentExists(manualDepositFrame.getComponent(), true,
+						applicationProperties.getApplicationData().getSettingsPath(),
+						applicationProperties.getApplicationData().getContentAggregatorUrl(), 
+						metaData.getCMSSystem(), cmsID);
 				contentExists.setVisible(true);
 				depositsExist = !contentExists.isMakeDeposit();
 			}
@@ -5497,8 +5585,7 @@ public class ManualDepositPresenter implements Serializable,
 						return;
 					}
 					if (theMaterialFlowList.getSelectedValue() == null) {
-						// Should never reach here because the UI should force
-						// selection
+						// Should never reach here because the UI should force selection
 						manualDepositFrame.showError("Cannot submit",
 								"Must select a material flow before submitting");
 						return;
@@ -5506,13 +5593,13 @@ public class ManualDepositPresenter implements Serializable,
 					Producer theProducer = (Producer) theProducerList
 							.getSelectedValue();
 					producerID = theProducer.getID();
-					MaterialFlow theMaterialFlow = (MaterialFlow) theMaterialFlowList
-							.getSelectedValue();
+					MaterialFlow theMaterialFlow = (MaterialFlow) theMaterialFlowList.getSelectedValue();
 					materialFlowID = theMaterialFlow.getID();
 				}
 			} else {
 				producerID = userGroupData.getUserProducerID();
 				materialFlowID = userGroupData.getMaterialFlowID();
+				System.out.println("*************** " + materialFlowID + " ****************");
 			}
 		} catch (InvalidApplicationDataException appEx) {
 			handleApplicationDataException(appEx);

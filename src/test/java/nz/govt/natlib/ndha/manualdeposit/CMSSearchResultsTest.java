@@ -168,7 +168,7 @@ public class CMSSearchResultsTest {
 		search.setCMS2ServerUrl(appData.getCMS2SearchUrl());
 		search.setCMS1ServerUrl(appData.getCMS1SearchUrl());
 		cmsResults = search.runQuery(criteria, ILSQueryType.eServerType.CMS2,
-				1, 10, 0, "dps");
+				1, 10, 0, "dps", "mngroot", "mngroot");
 		loginPresenter = new LoginPresenterTest();
 		parentPresenter = new ManualDepositPresenter(parentFrame, loginFrame,
 				loginPresenter, appProperties);

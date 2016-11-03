@@ -1,4 +1,4 @@
 # For directory dividers you must use \\ or / instead of \
 ApplicationPropertiesFile=I:/hokai/AppProperties.xml
 UserDataFile=I:/hokai/Users.xml
-ApplicationVersion=2.9 (DEV)
+ApplicationVersion=3.0 (DEV)

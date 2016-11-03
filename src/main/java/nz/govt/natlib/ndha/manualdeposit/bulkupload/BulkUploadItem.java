@@ -130,26 +130,23 @@ public final class BulkUploadItem {
 		public void run() {
 			try {
 				final ILSSearchFacade search = new IlsSearchFacadeImpl(
-						applicationProperties.getApplicationData()
-								.getSearchStrategyClass());
-				search.setCMS2ServerUrl(applicationProperties
-						.getApplicationData().getCMS2SearchUrl());
-				search.setCMS1ServerUrl(applicationProperties
-						.getApplicationData().getCMS1SearchUrl());
-				final SearchAttributeDetail attribute = theManualDepositParent
-						.getIDAttribute(theCmsID.trim(), theSearchType);
-				final SingleCriteria criteria = new SingleCriteria(attribute
-						.getAttribute(), attribute.getAttributeName(),
+						applicationProperties.getApplicationData().getSearchStrategyClass());
+				search.setCMS2ServerUrl(applicationProperties.getApplicationData().getCMS2SearchUrl());
+				search.setCMS1ServerUrl(applicationProperties.getApplicationData().getCMS1SearchUrl());
+				final SearchAttributeDetail attribute = theManualDepositParent.getIDAttribute(theCmsID.trim(), theSearchType);
+				final SingleCriteria criteria = new SingleCriteria(attribute.getAttribute(), attribute.getAttributeName(),
 						charEncode(attribute.getValue()));
 				CmsResults results = null;
 				int retryLoopCount = 0;
 				boolean retry = true;
+				String schema = applicationProperties.getApplicationData().getSruSearchSchema();
 				while (retry) {
 					try {
-						results = search.runQuery(criteria, theSearchType, 1,
-								RECORDS_PER_PAGE, SEARCH_TIMEOUT,
-								applicationProperties.getApplicationData()
-										.getSruSearchSchema());
+						if (theSearchType.equals(ILSQueryType.eServerType.CMS1)){
+							schema = "dc";
+						}
+						results = search.runQuery(criteria, theSearchType, 1, RECORDS_PER_PAGE, SEARCH_TIMEOUT,
+								schema, applicationProperties.getSysProxyUser(), applicationProperties.getSysProxyPassword());
 						retry = false;
 					} catch (SruTimeoutException ex) {
 						retryLoopCount++;
@@ -176,16 +173,14 @@ public final class BulkUploadItem {
 					try {
 						theManualDepositParent.setCMSResults(rec, theMetaData);
 						if ((theSearchType == ILSQueryType.eServerType.CMS1)
-								&& (!theCmsID.equalsIgnoreCase(theMetaData
-										.getCMSID()))) {
+								&& (!theCmsID.equalsIgnoreCase(theMetaData.getCMSID(theSearchType.name())))) {
 							jobState = JobState.InvalidCMSID;
 						} else {
-							theCmsID = theMetaData.getCMSID();
+							theCmsID = theMetaData.getCMSID(theSearchType.name());
 							LOG.debug(theCmsID + " After set: "
 									+ theMetaData.getAt(0).getDataFieldValue()
 									+ ", metaDataFile" + metaDataFile);
-							if (!theManualDepositParent.metaDataOkay(
-									theMetaData, true)) {
+							if (!theManualDepositParent.metaDataOkay(theMetaData, true)) {
 								jobState = JobState.InvalidMetaData;
 							}
 						}
@@ -229,8 +224,11 @@ public final class BulkUploadItem {
 
 		public void run() {
 			try {
-				if (theManualDepositParent.cmsIDExistsInDps(theCmsID.trim(),
-						theMetaData.getCMSSystem())) {
+				boolean isEmuCMS = false;
+				if (searchType == ILSQueryType.eServerType.CMS2){
+					isEmuCMS = true;
+				}
+				if (theManualDepositParent.cmsIDExistsInDps(theCmsID.trim(), theMetaData.getCMSSystem(), isEmuCMS)) {
 					setJobState(JobState.ItemExistsInDPS);
 				} else {
 					setJobState(JobState.ItemDoesNotExistInDPS);
@@ -319,6 +317,15 @@ public final class BulkUploadItem {
 		} else if (theMetaData.getCMSSystemType() == ECMSSystem.CMS1) {
 			searchType = eServerType.CMS1;
 			searchTypeLabel = applicationProperties.getApplicationData().getCMS1Label();
+		} else if (theMetaData.getCMSSystemType() == ECMSSystem.NoSystem) {
+			String oiValue = theMetaData.getMetaDataType("objectIdentifierType").getDataFieldValue();
+			if (oiValue != null)
+			{
+				searchType = eServerType.CMS1;
+				searchTypeLabel = applicationProperties.getApplicationData().getCMS1Label();
+			} else {
+				throw new InvalidCMSSystemException("Invalid CMS System");
+			}
 		} else {
 			throw new InvalidCMSSystemException("Invalid CMS System");
 		}

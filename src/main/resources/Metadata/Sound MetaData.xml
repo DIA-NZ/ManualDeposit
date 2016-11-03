@@ -15,9 +15,10 @@
     <ListValues objectName="CD_Inspector" Value="CD_Inspector" SortOrder="3" Display="CD Inspector"/>
     <ListValues objectName="EDIUS" Value="EDIUS" SortOrder="2" Display="EDIUS"/>
   </MetaData>
-  <MetaData objectName="5" DcType="" DataType="MultiSelect" AllowsMultipleRows="false" SortOrder="5" IsCMSSystem="false" DefaultValue="" IsCompulsory="true" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="false" IsDNX="true" DnxSubType="policyId" CMSFieldName="Rights" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="accessRightsPolicy" ProvenanceEventOutcome="false" DataFieldDescription="Access Restriction" DataFieldName="AccessRestriction" SavedWithTemplate="true" PopulatedFromCMS="true">
+  <MetaData objectName="5" DcType="" DataType="MultiSelect" AllowsMultipleRows="false" SortOrder="5" IsCMSSystem="false" DefaultValue="" IsCompulsory="true" DcTermsType="" IsCmsDescription="false" IsCMSID="false" IsVisible="true" DataFieldValue="" IsSetBySystem="false" IsDNX="true" DnxSubType="policyId" CMSFieldName="Rights" WillBeUploaded="true" MaximumLength="100" IsDCTerms="false" DnxType="accessRightsPolicy" ProvenanceEventOutcome="false" DataFieldDescription="Access Restriction" DataFieldName="AccessRestriction" IsCustomizable="false" SavedWithTemplate="true" PopulatedFromCMS="true">
     <ListValues objectName="300" Value="300" SortOrder="2" Display="Unpublished-Restricted by location">
       <ListValues objectName="Access to the abstract is unrestricted">Access to the abstract is unrestricted</ListValues>
+      <ListValues objectName="Partly restricted - Digital content available only in Katherine Mansfield Reading Room">Partly restricted - Digital content available only in Katherine Mansfield Reading Room</ListValues>
       <ListValues objectName="Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms.">Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms.</ListValues>
       <ListValues objectName="Access to this item is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms">Access to this item is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms</ListValues>
       <ListValues objectName="Access to the interview is unrestricted">Access to the interview is unrestricted</ListValues>
@@ -26,8 +27,10 @@
     </ListValues>
     <ListValues objectName="200" Value="200" SortOrder="1" Display="Published-restricted"/>
     <ListValues objectName="400" Value="400" SortOrder="3" Display="Unpublished-Restricted by Person">
+      <ListValues objectName="Partly restricted - Curator required">Partly restricted - Curator required</ListValues>
       <ListValues objectName="Access to the interview requires the written permission of both the interviewee and donor">Access to the interview requires the written permission of both the interviewee and donor</ListValues>
       <ListValues objectName="Access to the interview requires written permission of the interviewee">Access to the interview requires written permission of the interviewee</ListValues>
+      <ListValues objectName="Restricted - Content cannot be accessed without permission">Restricted - Content cannot be accessed without permission</ListValues>
       <ListValues objectName="Access to the interview requires the permission of the Curator of the Oral History Centre">Access to the interview requires the permission of the Curator of the Oral History Centre</ListValues>
       <ListValues objectName="Restricted - Once permission is granted the digital object can only be viewed in Alexander Turnbull Library reading rooms">Restricted - Once permission is granted the digital object can only be viewed in Alexander Turnbull Library reading rooms</ListValues>
       <ListValues objectName="Restricted">Restricted</ListValues>
@@ -36,6 +39,7 @@
       <ListValues objectName="T5">T5</ListValues>
       <ListValues objectName="Access to the interview requires written permission of the donor">Access to the interview requires written permission of the donor</ListValues>
       <ListValues objectName="Access to the collection is unrestricted but individual interviews may be restricted">Access to the collection is unrestricted but individual interviews may be restricted</ListValues>
+      <ListValues objectName="Restricted - Not able to be requested">Restricted - Not able to be requested</ListValues>
       <ListValues objectName="Access to the tape requires the written permission of the donor">Access to the tape requires the written permission of the donor</ListValues>
       <ListValues objectName="Original may be viewed with permission of private owner">Original may be viewed with permission of private owner</ListValues>
       <ListValues objectName="Access to the collection requires written permission of the donor">Access to the collection requires written permission of the donor</ListValues>
@@ -44,8 +48,10 @@
     <ListValues objectName="100" Value="100" SortOrder="0" Display="Open Access">
       <ListValues objectName="Partial restriction">Partial restriction</ListValues>
       <ListValues objectName="Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms">Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms</ListValues>
+      <ListValues objectName="Partly restricted - Please use surrogate in place of original">Partly restricted - Please use surrogate in place of original</ListValues>
       <ListValues objectName="Not restricted">Not restricted</ListValues>
       <ListValues objectName="Access to digital object is unrestricted">Access to digital object is unrestricted</ListValues>
+      <ListValues objectName="No Access Restrictions">No Access Restrictions</ListValues>
       <ListValues objectName="Unrestricted">Unrestricted</ListValues>
     </ListValues>
   </MetaData>

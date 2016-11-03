@@ -57,7 +57,6 @@ public class LoginPresenterTest implements ILoginPresenter {
 	 * NOT BE MODIFIED WITHOUT CHECKING HOW IT WILL AFFECT MANUAL DEPOSIT TESTS
 	 * They are not intended to be part of testing the actual login presenter
 	 */
-	@SuppressWarnings("PMD")
 	public void setup() {
 	}
 
@@ -69,11 +68,9 @@ public class LoginPresenterTest implements ILoginPresenter {
 		}
 	}
 
-	@SuppressWarnings("PMD")
 	public void cancelLogin() {
 	}
 
-	@SuppressWarnings("PMD")
 	public void resetLoginAttempts() {
 	}
 

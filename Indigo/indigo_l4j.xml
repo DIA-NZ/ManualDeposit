@@ -1,8 +1,8 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>C:\AppDev\workspace\ManualDeposit\ManualDeposit\target\ManualDeposit-2.8-SNAPSHOT.jar</jar>
-  <outfile>C:\AppDev\workspace\ManualDeposit\ManualDeposit\Install\Indigo\INDIGO.exe</outfile>
+  <jar>C:\AppDev\workspace\ManualDeposit\target\ManualDeposit-3.0.jar</jar>
+  <outfile>C:\AppDev\workspace\ManualDeposit\Install\Indigo\INDIGO.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir></chdir>
@@ -12,13 +12,13 @@
   <customProcName>false</customProcName>
   <stayAlive>false</stayAlive>
   <manifest></manifest>
-  <icon>C:\AppDev\workspace\ManualDeposit\ManualDeposit\Indigo\INDIGO_icon.ico</icon>
+  <icon>C:\AppDev\workspace\ManualDeposit\Indigo\INDIGO_icon.ico</icon>
   <classPath>
     <mainClass>nz.govt.natlib.ndha.manualdeposit.App</mainClass>
     <cp>dependency/*</cp>
   </classPath>
   <jre>
-    <path>jre1.6.0_35</path>
+    <path>jre1.8.0</path>
     <minVersion></minVersion>
     <maxVersion></maxVersion>
     <jdkPreference>preferJre</jdkPreference>
@@ -26,7 +26,7 @@
     <maxHeapSize>512</maxHeapSize>
   </jre>
   <splash>
-    <file>C:\AppDev\workspace\ManualDeposit\ManualDeposit\Indigo\indigo_splash.bmp</file>
+    <file>C:\AppDev\workspace\ManualDeposit\Indigo\indigo_splash.bmp</file>
     <waitForWindow>true</waitForWindow>
     <timeout>100</timeout>
     <timeoutErr>true</timeoutErr>

@@ -54,6 +54,8 @@ public class AppProperties {
 	private UserData userData = null;
 	private String loggedOnUser = null;
 	private String loggedOnUserPassword = null;
+	private String systemProxyUser = "";
+	private String systemProxyPassword = "";
 
 	public AppProperties() throws IOException {
 		loadProperties();
@@ -106,6 +108,22 @@ public class AppProperties {
 
 	public void setLoggedOnUserPassword(final String value) {
 		loggedOnUserPassword = value;
+	}
+	
+	public String getSysProxyUser() {
+		return systemProxyUser;
+	}
+	
+	public void setSysProxyUser(String value) {
+		systemProxyUser = value;
+	}
+	
+	public String getSysProxyPassword() {
+		return systemProxyPassword;
+	}
+	
+	public void setSysProxyPassword(String value) {
+		systemProxyPassword = value;
 	}
 
 	@SuppressWarnings("unchecked")

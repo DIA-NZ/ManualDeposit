@@ -24,6 +24,8 @@ package nz.govt.natlib.ndha.manualdeposit.customizemetadata;
 
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -31,22 +33,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.LayoutStyle.ComponentPlacement;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import nz.govt.natlib.ndha.common.guiutilities.FormControl;
 import nz.govt.natlib.ndha.common.mets.FileGroupCollection;
 import nz.govt.natlib.ndha.manualdeposit.FormUtilities;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import javax.swing.JButton;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.GroupLayout;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public final class CustomizeMetaDataForm extends javax.swing.JDialog implements
 	ICustomizeMetaDataEditorView {

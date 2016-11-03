@@ -1,22 +1,21 @@
 @echo off
 
 call mvn install:install-file -Dfile=./lib/a2j-2.0.5.jar -DgroupId=org.jzkit -DartifactId=a2j -Dversion=2.0.5 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/activation-1.1.jar -DgroupId=activation -DartifactId=activation -Dversion=1.1 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/avalon-framework-4.1.3.jar -DgroupId=avalon-framework -DartifactId=avalon-framework -Dversion=4.1.3 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/Common-2.9.jar -DgroupId=nz.govt.natlib.ndha.common -DartifactId=Common -Dversion=2.9 -Dpackaging=jar
+call mvn install:install-file -Dfile=./lib/Common-3.0.jar -DgroupId=nz.govt.natlib.ndha.common -DartifactId=Common -Dversion=3.0 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/commons-beanutils-1.9.2.jar -DgroupId=commons-beanutils -DartifactId=commons-beanutils -Dversion=1.9.2 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/commons-codec-1.10.jar -DgroupId=commons-codec -DartifactId=commons-codec -Dversion=1.10 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/commons-httpclient-3.1.jar -DgroupId=commons-httpclient -DartifactId=commons-httpclient -Dversion=3.1 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/commons-lang-2.6.jar -DgroupId=commons-lang -DartifactId=commons-lang -Dversion=2.6 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/commons-logging-1.2.jar -DgroupId=commons-logging -DartifactId=commons-logging -Dversion=1.2 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/commons-net-3.4.jar -DgroupId=commons-net -DartifactId=commons-net -Dversion=3.4 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/DepositWS-4.0.jar -DgroupId=com.exlibris.dps -DartifactId=DepositWS -Dversion=4.0 -Dpackaging=jar
+call mvn install:install-file -Dfile=./lib/DepositWS-5.0.jar -DgroupId=com.exlibris.dps -DartifactId=DepositWS -Dversion=5.0 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/dom4j-1.6.1.jar -DgroupId=dom4j -DartifactId=dom4j -Dversion=1.6.1 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/dps-sdk-5.0.0.jar -DgroupId=com.exlibris -DartifactId=dps-sdk -Dversion=5.0.0 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/ExLibrisMetsWriter-2.9.jar -DgroupId=nz.govt.natlib.ndha.exlibrismetswriter -DartifactId=Exlibrismetswriter -Dversion=2.9 -Dpackaging=jar
+call mvn install:install-file -Dfile=./lib/dps-sdk-5.0.1.jar -DgroupId=com.exlibris -DartifactId=dps-sdk -Dversion=5.0.1 -Dpackaging=jar
+call mvn install:install-file -Dfile=./lib/ExLibrisMetsWriter-3.0.jar -DgroupId=nz.govt.natlib.ndha.exlibrismetswriter -DartifactId=Exlibrismetswriter -Dversion=3.0 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/guava-19.0.jar -DgroupId=com.google.guava -DartifactId=guava -Dversion=19.0 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/guice-1.0.jar -DgroupId=com.google.code.guice -DartifactId=guice -Dversion=1.0 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/hamcrest-core-1.3.jar -DgroupId=org.hamcrest -DartifactId=hamcrest-core -Dversion=1.3 -Dpackaging=jar
+call mvn install:install-file -Dfile=./lib/httpclient-4.5.2.jar -DgroupId=org.apache.httpcomponents -DartifactId=httpclient -Dversion=4.5.2 -Dpackaging=jar
+call mvn install:install-file -Dfile=./lib/httpcore-4.4.5.jar -DgroupId=org.apache.httpcomponents -DartifactId=httpcore -Dversion=4.4.5 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/jasypt-1.9.2.jar -DgroupId=org.jasypt -DartifactId=jasypt -Dversion=1.9.2 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/jaxen-1.1.6.jar -DgroupId=commons-jaxen -DartifactId=jaxen -Dversion=1.1.6 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/jdom-1.0.jar -DgroupId=jdom -DartifactId=jdom -Dversion=1.0 -Dpackaging=jar
@@ -27,19 +26,16 @@ call mvn install:install-file -Dfile=./lib/jxl-2.6.9.jar -DgroupId=jexcelapi -Da
 call mvn install:install-file -Dfile=./lib/jzkit2_core-2.2.2.jar -DgroupId=org.jzkit -DartifactId=jzkit2_core -Dversion=2.2.2 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/jzkit2_z3950_plugin-2.2.2.jar -DgroupId=org.jzkit -DartifactId=jzkit2_z3950_plugin -Dversion=2.2.2 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/log4j-1.2.17.jar -DgroupId=log4j -DartifactId=log4j -Dversion=1.2.17 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/logkit-1.0.1.jar -DgroupId=logkit -DartifactId=logkit -Dversion=1.0.1 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/mail-1.4.jar -DgroupId=mail -DartifactId=mail -Dversion=1.4 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/marc4j_2.3.1_name_space_changed-2.3.1.jar -DgroupId=org.tigris -DartifactId=marc4j_2.3.1_name_space_changed -Dversion=2.3.1 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/marc4j-1.0.0.jar -DgroupId=org.tigris -DartifactId=marc4j -Dversion=1.0.0 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/marcxml-1.0.0.jar -DgroupId=gov.loc.www -DartifactId=marcxml -Dversion=1.0.0 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/metsxmlbeans-1.7.jar -DgroupId=gov.loc.mets -DartifactId=metsxmlbeans -Dversion=1.7 -Dpackaging=jar
+call mvn install:install-file -Dfile=./lib/metsxmlbeans-1.8.jar -DgroupId=gov.loc.mets -DartifactId=metsxmlbeans -Dversion=1.8 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/oro-2.0.8.jar -DgroupId=oro -DartifactId=oro -Dversion=2.0.8 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/policy-4.2.2.GA.jar -DgroupId=policy -DartifactId=policy -Dversion=4.2.2.GA -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/ProducerWS-4.0.jar -DgroupId=com.exlibris.dps -DartifactId=ProducerWS -Dversion=4.0 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/servlet-api-2.5.jar -DgroupId=javax.servlet -DartifactId=servlet-api -Dversion=2.5 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/SipWS-4.0.jar -DgroupId=com.exlibris.dps -DartifactId=SipWS -Dversion=4.0 -Dpackaging=jar
+call mvn install:install-file -Dfile=./lib/ProducerWS-5.0.jar -DgroupId=com.exlibris.dps -DartifactId=ProducerWS -Dversion=5.0 -Dpackaging=jar
+call mvn install:install-file -Dfile=./lib/SipWS-5.0.jar -DgroupId=com.exlibris.dps -DartifactId=SipWS -Dversion=5.0 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/spring-2.5.jar -DgroupId=org.springframework -DartifactId=spring -Dversion=2.5 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/srusearchclient-1.13.jar -DgroupId=nz.govt.natlib.ndha.srusearchclient -DartifactId=srusearchclient -Dversion=1.13 -Dpackaging=jar
+call mvn install:install-file -Dfile=./lib/srusearchclient-1.14.jar -DgroupId=nz.govt.natlib.ndha.srusearchclient -DartifactId=srusearchclient -Dversion=1.14 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/swing-layout-7.3.4.jar -DgroupId=net.java.dev.swing-layout -DartifactId=swing-layout -Dversion=7.3.4 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/swingx-1.6.2.jar -DgroupId=org.jdesktop.swingx -DartifactId=swingx -Dversion=1.6.2 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/wsdl4j-1.6.3.jar -DgroupId=wsdl4j -DartifactId=wsdl4j -Dversion=1.6.3 -Dpackaging=jar
@@ -50,4 +46,3 @@ call mvn install:install-file -Dfile=./lib/xmlpublic-2.3.0.jar -DgroupId=xmlpubl
 call mvn install:install-file -Dfile=./lib/jmock-2.8.2.jar -DgroupId=org.jmock -DartifactId=jmock -Dversion=2.8.2 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/jmock-cglib-1.2.0.jar -DgroupId=org.jmock -DartifactId=jmock-cglib -Dversion=1.2.0 -Dpackaging=jar
 call mvn install:install-file -Dfile=./lib/junit-4.12.jar -DgroupId=junit -DartifactId=junit -Dversion=4.12 -Dpackaging=jar
-call mvn install:install-file -Dfile=./lib/junit-addons-1.4.jar -DgroupId=junit-addons -DartifactId=junit-addons -Dversion=1.4 -Dpackaging=jar

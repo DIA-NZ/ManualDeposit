@@ -1,0 +1,238 @@
+DEBUG 2016-11-04 11:39:03.966 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:03.966 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:03.966 -setCMS1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?
+DEBUG 2016-11-04 11:39:03.966 -setCMS1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?
+DEBUG 2016-11-04 11:39:03.967 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:03.967 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:03.967 -setCMS1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?
+DEBUG 2016-11-04 11:39:03.967 -setCMS1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?
+DEBUG 2016-11-04 11:39:04.834 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:04.834 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:04.835 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:04.835 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:04.861 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:04.861 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:04.861 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:04.861 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.258 -Login class: nz.govt.natlib.ndha.common.exlibris.Login
+DEBUG 2016-11-04 11:39:05.259 -logging in with mngroot
+DEBUG 2016-11-04 11:39:05.260 -logging in with 
+DEBUG 2016-11-04 11:39:05.361 -logging in with 
+DEBUG 2016-11-04 11:39:05.462 -logging in with 
+DEBUG 2016-11-04 11:39:05.722 -Login class: nz.govt.natlib.ndha.common.exlibris.Login
+DEBUG 2016-11-04 11:39:05.773 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.773 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.773 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.773 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.795 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.795 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.795 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.795 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.970 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.970 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.971 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.971 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.992 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.992 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.992 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:05.992 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.704 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.704 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.704 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.704 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.730 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.730 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.730 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.730 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.922 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.922 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.922 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.922 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.947 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.947 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.947 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:07.947 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.277 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.277 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.277 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.277 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.304 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.304 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.304 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.304 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.452 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.452 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.452 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.452 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.478 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.478 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.478 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.478 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.701 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.701 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.701 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.701 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.726 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.726 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.726 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.726 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.864 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.864 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.864 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.864 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.884 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.884 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.884 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:09.884 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.118 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.118 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.119 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.119 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.141 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.141 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.141 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.141 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.415 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.415 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.415 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.415 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.440 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.440 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.440 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.440 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.860 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.860 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.860 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.860 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.883 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.883 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.885 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:11.885 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:14.992 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:14.992 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:14.992 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:14.992 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.012 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.012 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.012 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.012 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.137 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.137 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.137 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.137 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.158 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.158 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.158 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.158 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.315 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.315 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.316 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.316 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.334 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.334 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.334 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.334 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.510 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.510 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.510 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.510 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.534 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.534 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.534 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.534 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.667 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.667 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.667 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.667 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.687 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.687 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.687 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.687 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.822 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.822 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.823 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.823 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.843 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.843 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.843 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.843 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.987 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.987 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.987 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:15.987 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.008 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.008 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.008 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.008 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.169 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.169 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.169 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.169 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.190 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.190 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.190 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.190 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.562 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.562 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.562 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.562 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.589 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.589 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.589 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.589 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.747 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.747 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.747 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.747 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.769 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.769 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.769 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.769 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.970 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.970 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.970 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.970 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.993 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.993 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.994 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:16.994 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.331 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.331 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.331 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.331 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.355 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.355 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.355 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.355 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.526 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.526 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.526 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.526 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.565 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.565 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.566 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.566 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.932 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.932 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.933 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.933 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.954 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.954 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.954 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:17.954 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:19.165 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:19.165 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:19.165 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:19.165 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:19.187 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:19.187 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:19.187 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:19.187 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:20.381 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:20.381 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:20.381 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:20.381 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:20.407 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:20.407 -setCMS2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:20.407 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?
+DEBUG 2016-11-04 11:39:20.407 -getIndexList, cms1ServerUrl: https://nlnz.alma.exlibrisgroup.com/view/sru/64NLNZ_MAIN?, cms2ServerUrl: http://wlgortimuweb01.natlib.govt.nz:8080/sru?

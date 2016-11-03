@@ -47,6 +47,8 @@ public class SearchAttributeController {
 			for (int i = 0; i < indices.size(); i++) {
 				SruIndex index = indices.get(i);
 	        	if ((index.getTitle().equalsIgnoreCase("Reference Number"))
+	        			//|| (index.getTitle().equalsIgnoreCase("CMS ID"))
+	        			|| (index.getTitle().equalsIgnoreCase("MMS ID"))
 	        			|| (index.getTitle().equalsIgnoreCase("Record Number"))) {
 					String name = index.getNames().get(0);
 					attribute = new SearchAttributeDetail(name, idWanted);

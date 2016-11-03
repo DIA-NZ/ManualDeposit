@@ -25,6 +25,7 @@ package nz.govt.natlib.ndha.manualdeposit.metadata;
 import javax.swing.JOptionPane;
 
 import nz.govt.natlib.ndha.common.guiutilities.FormControl;
+import nz.govt.natlib.ndha.manualdeposit.metadata.UserGroupData.UserGroupDesc;
 
 public class MaintainUserGroupData extends javax.swing.JPanel {
 
@@ -40,9 +41,17 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
 	public MaintainUserGroupData(MetaDataConfiguratorPresenter presenter,
 			FormControl control) {
 		initComponents(); // NOPMD
+		//set material flow labels and text fields to invisible by default
+		jLabel22.setVisible(false);
+		jLabel23.setVisible(false);
+		jLabel25.setText("Alma Material Flow ID");
+		jLabel26.setVisible(false);
+        txtSerialMaterialFlowID.setVisible(false);
+        txtVideoMaterialFlowID.setVisible(false);
+        //txtMonoMaterialFlowID.setVisible(false);
+        txtMusicMaterialFlowID.setVisible(false);
 		thePresenter = presenter;
-		thePresenter
-				.addUserGroupHandlers(lblCleanupDirectory, lblDelay,
+		thePresenter.addUserGroupHandlers(lblCleanupDirectory, lblDelay,
 						txtCleanupDelay, cmbCleanupType,
 						lstCharacterTranslations, cmbCharacterPosition,
 						txtCharacterToTranslate, txtTranslateItTo, cmbUserGroupDesc);
@@ -51,6 +60,52 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
 
 	public void loadUserGroupData(UserGroupData userGroupData) {
 		theUserGroupData = userGroupData;
+		if (userGroupData.getUserGroupDesc().equals(UserGroupDesc.Published)){
+	        jLabel2.setText("Include Serial");
+	        jLabel3.setText("Include Mono");
+	        jLabel4.setText("Include Video");
+	        jLabel5.setText("Include Audio");
+	        
+	        jLabel9.setText("Serial MetaData File");
+	        jLabel10.setText("Mono MetaData File");
+	        jLabel11.setText("Video MetaData File");
+	        jLabel12.setText("Audio MetaData File");
+	        
+	        jLabel22.setVisible(true);
+	        jLabel23.setVisible(true);
+	        jLabel25.setText("Mono Material Flow ID");
+	        jLabel26.setVisible(true);
+	        txtSerialMaterialFlowID.setVisible(true);
+	        //txtMonoMaterialFlowID.setVisible(true);
+	        txtVideoMaterialFlowID.setVisible(true);
+	        txtMusicMaterialFlowID.setVisible(true);
+	        
+	        txtSerialMaterialFlowID.setText(theUserGroupData.getSerialMaterialFlowID());
+	        txtAlmaOrMonoMaterialFlowID.setText(theUserGroupData.getMonoMaterialFlowID());
+	        txtVideoMaterialFlowID.setText(theUserGroupData.getVideoMaterialFlowID());
+	        txtMusicMaterialFlowID.setText(theUserGroupData.getAudioMaterialFlowID());
+	        
+		} else{
+	        jLabel22.setVisible(false);
+	        jLabel23.setVisible(false);
+	        jLabel25.setText("Alma Material Flow ID");
+	        jLabel26.setVisible(false);
+	        txtSerialMaterialFlowID.setVisible(false);
+	        txtVideoMaterialFlowID.setVisible(false);
+	        //txtMonoMaterialFlowID.setVisible(false);
+	        txtMusicMaterialFlowID.setVisible(false);
+	        txtAlmaOrMonoMaterialFlowID.setText(theUserGroupData.getAlmaMaterialFlowID());
+	        
+	        jLabel2.setText("Include CMS 2 Search?");
+	        jLabel3.setText("Include CMS 1 Search?");
+	        jLabel4.setText("Include No CMS Option?");
+	        jLabel5.setText("Include Staff Mediated?");
+	        
+	        jLabel9.setText("CMS 2 MetaData File");
+	        jLabel10.setText("CMS 1 MetaData File");
+	        jLabel11.setText("No CMS MetaData File");
+	        jLabel12.setText("Staff Mediated MetaData File");
+		}
 		chkIncludeMultiEntityMenu.setSelected(theUserGroupData
 				.isIncludeMultiEntityMenuItem());
 		chkIncludeNoCMSOption.setSelected(theUserGroupData
@@ -189,6 +244,14 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
         txtBulkLoadBatchSize = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         cmbUserGroupDesc = new javax.swing.JComboBox();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        txtSerialMaterialFlowID = new javax.swing.JTextField();
+        txtVideoMaterialFlowID = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        txtAlmaOrMonoMaterialFlowID = new javax.swing.JTextField();
+        txtMusicMaterialFlowID = new javax.swing.JTextField();
 
         btnSelectFile.setText("Select User Group Data File");
         btnSelectFile.addActionListener(new java.awt.event.ActionListener() {
@@ -211,11 +274,11 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
 
         jLabel6.setText("Include Multi-entity Menu Item?");
 
-        jLabel7.setText("Material Flow ID");
+        jLabel7.setText("EMu Material Flow ID");
 
         jLabel8.setText("User Producer ID");
 
-        jLabel9.setText("CMS 2 MetaData File");
+        jLabel9.setText("CMS 2  MetaData File");
 
         jLabel10.setText("CMS 1 MetaData File");
 
@@ -336,6 +399,27 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
             }
         });
 
+        jLabel22.setText("Serial Material Flow ID");
+
+        jLabel23.setText("Video Material Flow ID");
+
+        txtSerialMaterialFlowID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSerialMaterialFlowIDActionPerformed(evt);
+            }
+        });
+
+        txtVideoMaterialFlowID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtVideoMaterialFlowIDActionPerformed(evt);
+            }
+        });
+
+        jLabel25.setText("Alma Material Flow ID");
+        jLabel25.setToolTipText("");
+
+        jLabel26.setText("Audio Material Flow ID");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -370,34 +454,57 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(chkIncludeNoCMSOption)
                                                     .addComponent(chkIncludeCMS2Search))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 467, Short.MAX_VALUE)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addGap(28, 28, 28)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel23)
+                                                    .addComponent(jLabel22))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(txtSerialMaterialFlowID, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(txtVideoMaterialFlowID, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                     .addGroup(layout.createSequentialGroup()
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(jLabel5)
-                                                            .addComponent(jLabel20)
-                                                            .addComponent(jLabel3))
-                                                        .addGap(33, 33, 33)
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                .addComponent(chkIncludeCMS1Search, javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addComponent(chkIncludeStaffMediated, javax.swing.GroupLayout.Alignment.LEADING))
-                                                            .addComponent(txtBulkLoadBatchSize, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGap(92, 92, 92))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(jLabel21)
+                                                        .addComponent(jLabel25)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(cmbUserGroupDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                            .addComponent(txtFileTypesPropsFile, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
-                                            .addComponent(txtSharedTemplateLocation, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
-                                            .addComponent(txtInterimCleanupDirectory, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
+                                                        .addComponent(txtAlmaOrMonoMaterialFlowID, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(jLabel26)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(txtMusicMaterialFlowID, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(30, 30, 30)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                            .addGroup(layout.createSequentialGroup()
+                                                                .addGap(133, 133, 133)
+                                                                .addComponent(txtBulkLoadBatchSize, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                                .addComponent(jLabel3)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                    .addComponent(chkIncludeCMS1Search, javax.swing.GroupLayout.Alignment.LEADING)
+                                                                    .addComponent(chkIncludeStaffMediated, javax.swing.GroupLayout.Alignment.LEADING))))
+                                                        .addGap(92, 92, 92))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel5)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addComponent(jLabel21)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                            .addComponent(cmbUserGroupDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(jLabel20))))
+                                            .addComponent(txtFileTypesPropsFile)
+                                            .addComponent(txtSharedTemplateLocation)
+                                            .addComponent(txtInterimCleanupDirectory)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(cmbCleanupType, 0, 634, Short.MAX_VALUE)
+                                                .addComponent(cmbCleanupType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(lblDelay)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(txtCleanupDelay, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jLabel15)))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel15)
+                                                .addGap(0, 0, Short.MAX_VALUE))))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel6)
@@ -413,10 +520,10 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
                                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(10, 10, 10)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtStaffMediatedMetaDataFile, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
-                                            .addComponent(txtNoCMSDataMetaDataFile, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
-                                            .addComponent(txtCMS1MetaDataFile, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
-                                            .addComponent(txtCMS2MetaDataFile, javax.swing.GroupLayout.DEFAULT_SIZE, 776, Short.MAX_VALUE)
+                                            .addComponent(txtStaffMediatedMetaDataFile)
+                                            .addComponent(txtNoCMSDataMetaDataFile)
+                                            .addComponent(txtCMS1MetaDataFile)
+                                            .addComponent(txtCMS2MetaDataFile)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel17)
@@ -428,7 +535,7 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jLabel19)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(cmbCharacterPosition, 0, 557, Short.MAX_VALUE))
+                                                .addComponent(cmbCharacterPosition, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(chkIncludeMultiEntityMenu)
@@ -458,44 +565,66 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
                     .addComponent(btnSelectFile)
                     .addComponent(lblFileName))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(btnBrowseSharedTemplate)
-                    .addComponent(txtSharedTemplateLocation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(btnFileTypesPropsFile)
-                    .addComponent(txtFileTypesPropsFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(txtCleanupDelay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDelay)
-                    .addComponent(cmbCleanupType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtInterimCleanupDirectory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCleanupDirectory)
-                    .addComponent(btnInterimCleanupDirectory))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(btnBrowseSharedTemplate)
+                            .addComponent(txtSharedTemplateLocation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(btnFileTypesPropsFile)
+                            .addComponent(txtFileTypesPropsFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel14)
+                            .addComponent(txtCleanupDelay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDelay)
+                            .addComponent(cmbCleanupType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtInterimCleanupDirectory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblCleanupDirectory)
+                            .addComponent(btnInterimCleanupDirectory))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel25)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(chkIncludeCMS2Search)
+                                    .addComponent(jLabel2)
+                                    .addComponent(chkIncludeCMS1Search))
+                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(txtAlmaOrMonoMaterialFlowID, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(chkIncludeCMS2Search)
-                        .addComponent(jLabel2)
-                        .addComponent(chkIncludeCMS1Search)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(chkIncludeNoCMSOption)
-                    .addComponent(jLabel5)
-                    .addComponent(chkIncludeStaffMediated))
+                        .addComponent(jLabel22)
+                        .addComponent(txtSerialMaterialFlowID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(chkIncludeNoCMSOption)
+                            .addComponent(chkIncludeStaffMediated))
+                        .addGap(79, 79, 79)
+                        .addComponent(btnBrowseCMS2MetaDataFile))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel5)
+                                    .addComponent(txtMusicMaterialFlowID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel26)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel23)
+                                    .addComponent(txtVideoMaterialFlowID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel6)
@@ -531,16 +660,13 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel12)
                             .addComponent(txtStaffMediatedMetaDataFile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnBrowseStaffMediatedMetaDataFile)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(btnBrowseCMS2MetaDataFile)))
+                            .addComponent(btnBrowseStaffMediatedMetaDataFile))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -560,7 +686,7 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
                     .addComponent(btnCancel))
-                .addContainerGap())
+                .addGap(18, 18, 18))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -571,6 +697,14 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
     private void cmbUserGroupDescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbUserGroupDescActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbUserGroupDescActionPerformed
+
+    private void txtSerialMaterialFlowIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSerialMaterialFlowIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSerialMaterialFlowIDActionPerformed
+
+    private void txtVideoMaterialFlowIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVideoMaterialFlowIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtVideoMaterialFlowIDActionPerformed
 
 	private void btnUpdateTranslationDataActionPerformed(
 			java.awt.event.ActionEvent evt) {
@@ -625,6 +759,16 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
 			theUserGroupData.setIncludeCMS1Search(chkIncludeCMS1Search
 					.isSelected());
 			theUserGroupData.setMaterialFlowID(txtMaterialFlowID.getText());
+			theUserGroupData.setEmuMaterialFlowID(txtMaterialFlowID.getText());          
+			if (cmbUserGroupDesc.getSelectedItem().equals(UserGroupDesc.Published)){
+                theUserGroupData.setSerialMaterialFlowID(txtSerialMaterialFlowID.getText());
+                theUserGroupData.setMonoMaterialFlowID(txtAlmaOrMonoMaterialFlowID.getText());
+                theUserGroupData.setVideoMaterialFlowID(txtVideoMaterialFlowID.getText());
+                theUserGroupData.setAudioMaterialFlowID(txtMusicMaterialFlowID.getText());
+			}else{
+				theUserGroupData.setAlmaMaterialFlowID(txtAlmaOrMonoMaterialFlowID.getText());
+			}
+			
 			theUserGroupData.setNoCMSMetaDataFile(txtNoCMSDataMetaDataFile
 					.getText());
 			theUserGroupData.setSharedTemplatePath(txtSharedTemplateLocation
@@ -699,11 +843,11 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBrowseCMS1MetaDataFile;
+    private javax.swing.JButton btnBrowseCMS2MetaDataFile;
     private javax.swing.JButton btnBrowseNoCMSMetaDataFile;
     private javax.swing.JButton btnBrowseSharedTemplate;
     private javax.swing.JButton btnBrowseStaffMediatedMetaDataFile;
-    private javax.swing.JButton btnBrowseCMS2MetaDataFile;
-    private javax.swing.JButton btnBrowseCMS1MetaDataFile;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnDeleteTranslationChar;
     private javax.swing.JButton btnFileTypesPropsFile;
@@ -711,11 +855,11 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnSelectFile;
     private javax.swing.JButton btnUpdateTranslationData;
+    private javax.swing.JCheckBox chkIncludeCMS1Search;
+    private javax.swing.JCheckBox chkIncludeCMS2Search;
     private javax.swing.JCheckBox chkIncludeMultiEntityMenu;
     private javax.swing.JCheckBox chkIncludeNoCMSOption;
     private javax.swing.JCheckBox chkIncludeStaffMediated;
-    private javax.swing.JCheckBox chkIncludeCMS2Search;
-    private javax.swing.JCheckBox chkIncludeCMS1Search;
     private javax.swing.JComboBox cmbCharacterPosition;
     private javax.swing.JComboBox cmbCleanupType;
     private javax.swing.JComboBox cmbUserGroupDesc;
@@ -733,6 +877,10 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -745,19 +893,23 @@ public class MaintainUserGroupData extends javax.swing.JPanel {
     private javax.swing.JLabel lblDelay;
     private javax.swing.JLabel lblFileName;
     private javax.swing.JList lstCharacterTranslations;
+    private javax.swing.JTextField txtAlmaOrMonoMaterialFlowID;
     private javax.swing.JTextField txtBulkLoadBatchSize;
+    private javax.swing.JTextField txtCMS1MetaDataFile;
+    private javax.swing.JTextField txtCMS2MetaDataFile;
     private javax.swing.JTextField txtCharacterToTranslate;
     private javax.swing.JTextField txtCleanupDelay;
     private javax.swing.JTextField txtFileTypesPropsFile;
     private javax.swing.JTextField txtInterimCleanupDirectory;
     private javax.swing.JTextField txtMaterialFlowID;
+    private javax.swing.JTextField txtMusicMaterialFlowID;
     private javax.swing.JTextField txtNoCMSDataMetaDataFile;
+    private javax.swing.JTextField txtSerialMaterialFlowID;
     private javax.swing.JTextField txtSharedTemplateLocation;
     private javax.swing.JTextField txtStaffMediatedMetaDataFile;
-    private javax.swing.JTextField txtCMS2MetaDataFile;
     private javax.swing.JTextField txtTranslateItTo;
     private javax.swing.JTextField txtUserProducerID;
-    private javax.swing.JTextField txtCMS1MetaDataFile;
+    private javax.swing.JTextField txtVideoMaterialFlowID;
     // End of variables declaration//GEN-END:variables
 	
 }

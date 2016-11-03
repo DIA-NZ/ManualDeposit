@@ -178,6 +178,12 @@ public final class UserGroupData {
 	private final static String PROP_CLEANUP_DELAY = "CleanupDelay";
 	private final static String PROP_BULK_BATCH_SIZE = "BulkBatchSize";
 	private final static String PROP_USER_GROUP_DESC = "UserGroupDesc";
+	
+	private final static String PROP_SERIAL_MATERIAL_FLOW_ID = "SerialMaterialFlowID";
+	private final static String PROP_MONO_MATERIAL_FLOW_ID = "MonoMaterialFlowID";
+	private final static String PROP_VIDEO_MATERIAL_FLOW_ID = "VideoMaterialFlowID";
+	private final static String MUSIC_MATERIAL_FLOW_ID = "AudioMaterialFlowID";
+	private final static String PROP_ALMA_MATERIAL_FLOW_ID = "AlmaMaterialFlowID";
 
 	private String sharedTemplatePath;
 	private String sharedStructTemplatePath = null;
@@ -204,6 +210,13 @@ public final class UserGroupData {
 	private int bulkBatchSize = 1;
 	private List<CharacterTranslations> characterTranslations = new ArrayList<CharacterTranslations>();
 	private UserGroupDesc userGroupDesc = UserGroupDesc.None;
+	
+	private String serialMaterialFlowID;
+	private String monoMaterialFlowID;
+	private String videoMaterialFlowID;
+	private String musicMaterialFlowID;
+	private String almaMaterialFlowID;
+	private String emuMaterialFlowID;
 
 	public enum ECleanupType {
 		None("No file cleanup"), Immediate(
@@ -226,8 +239,8 @@ public final class UserGroupData {
 	}
 	
 	public enum UserGroupDesc {
-		None("No User Group"), Digitisation("Digitisation User Group "), 
-		StaffMediated("Published or Unpublished User Group"), Sound("Sound User Group"), Video("Video User Group"), WebHarvest("WebHarvest User Group");
+		None("No User Group"), Digitisation("Digitisation User Group "), Published("Published User Group"),
+		StaffMediated("Unpublished User Group"), Sound("Sound User Group"), Video("Video User Group"), WebHarvest("WebHarvest User Group");
 		
 		private final String _groupDescription;
 
@@ -422,6 +435,54 @@ public final class UserGroupData {
 	public void setUserGroupDesc(final UserGroupDesc value) {
 		userGroupDesc = value;
 	}
+	
+	public String getSerialMaterialFlowID() {
+		return serialMaterialFlowID;
+	}
+
+	public void setSerialMaterialFlowID(final String value) {
+		serialMaterialFlowID = value;
+	}
+	
+	public String getMonoMaterialFlowID() {
+		return monoMaterialFlowID;
+	}
+
+	public void setMonoMaterialFlowID(final String value) {
+		monoMaterialFlowID = value;
+	}
+	
+	public String getVideoMaterialFlowID() {
+		return videoMaterialFlowID;
+	}
+
+	public void setVideoMaterialFlowID(final String value) {
+		videoMaterialFlowID = value;
+	}
+	
+	public String getAudioMaterialFlowID() {
+		return musicMaterialFlowID;
+	}
+
+	public void setAudioMaterialFlowID(final String value) {
+		musicMaterialFlowID = value;
+	}
+	
+	public String getAlmaMaterialFlowID() {
+		return almaMaterialFlowID;
+	}
+
+	public void setAlmaMaterialFlowID(final String value) {
+		almaMaterialFlowID = value;
+	}
+	
+	public String getEmuMaterialFlowID() {
+		return emuMaterialFlowID;
+	}
+
+	public void setEmuMaterialFlowID(final String value) {
+		emuMaterialFlowID = value;
+	}	
 
 	public void loadStructureMapFileTypes(final boolean throwFileTypesException)
 			throws FileNotFoundException {
@@ -705,6 +766,12 @@ public final class UserGroupData {
 		object.addAttribute(PROP_BULK_BATCH_SIZE, String.format("%d",
 				bulkBatchSize));
 		object.addAttribute(PROP_USER_GROUP_DESC, userGroupDesc.name());
+		
+		object.addAttribute(PROP_SERIAL_MATERIAL_FLOW_ID, serialMaterialFlowID);
+		object.addAttribute(PROP_MONO_MATERIAL_FLOW_ID, monoMaterialFlowID);
+		object.addAttribute(PROP_VIDEO_MATERIAL_FLOW_ID, videoMaterialFlowID);
+		object.addAttribute(MUSIC_MATERIAL_FLOW_ID, musicMaterialFlowID);
+		object.addAttribute(PROP_ALMA_MATERIAL_FLOW_ID, almaMaterialFlowID);
 
 		for (CharacterTranslations translation : characterTranslations) {
 			object.addChild("Char_" + translation.getCharacterToTranslate(),
@@ -842,6 +909,23 @@ public final class UserGroupData {
 			userGroupDesc = UserGroupDesc.valueOf(object
 					.getAttribute(PROP_USER_GROUP_DESC));
 		}
+		
+		if (object.getAttribute(PROP_SERIAL_MATERIAL_FLOW_ID) != null) {
+			serialMaterialFlowID = object.getAttribute(PROP_SERIAL_MATERIAL_FLOW_ID);
+		}
+		if (object.getAttribute(PROP_MONO_MATERIAL_FLOW_ID) != null) {
+			monoMaterialFlowID = object.getAttribute(PROP_MONO_MATERIAL_FLOW_ID);
+		}
+		if (object.getAttribute(PROP_VIDEO_MATERIAL_FLOW_ID) != null) {
+			videoMaterialFlowID = object.getAttribute(PROP_VIDEO_MATERIAL_FLOW_ID);
+		}
+		if (object.getAttribute(MUSIC_MATERIAL_FLOW_ID) != null) {
+			musicMaterialFlowID = object.getAttribute(MUSIC_MATERIAL_FLOW_ID);
+		}
+		if (object.getAttribute(PROP_ALMA_MATERIAL_FLOW_ID) != null) {
+			almaMaterialFlowID = object.getAttribute(PROP_ALMA_MATERIAL_FLOW_ID);
+		}
+		
 		for (XMLObject child : object.getChildObjects()) {
 			characterTranslations.add(new CharacterTranslations(child));
 		}

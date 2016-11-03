@@ -535,6 +535,8 @@ public class ManualDepositPresenterTest {
 		} catch (Exception ex) {
 			fail();
 		}
+		applicationProperties.setSysProxyUser(LOGIN_NAME);
+		applicationProperties.setSysProxyPassword(LOGIN_PASSWORD);
 		depositPresenter = new ManualDepositPresenter(theFrame, loginFrame,
 				loginPresenter, applicationProperties);
 		theFrame.setPresenter(depositPresenter);

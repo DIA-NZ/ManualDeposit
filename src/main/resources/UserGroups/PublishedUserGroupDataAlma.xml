@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<UserData>
+  <Documentation>To edit this file, use Indigo.exe /MetaData</Documentation>
+  <UserData objectName="UserData" NoCMSMetaDataFile="./src/main/resources/Metadata/Published MetaDataAlma_Mono.xml" AudioMaterialFlowID="1792361883" IncludeNoCMSOption="true" UserGroupDesc="Published" SharedTemplateLocation="I:\UAT\SharedTemplates" VideoMaterialFlowID="1792361994" IncludeCMS2Search="true" BulkBatchSize="1" MonoMaterialFlowID="1778612277" UserProducerID="1528269353" CMS1MetaDataFile="./src/main/resources/Metadata/Published MetaDataAlma_Mono.xml" CleanupType="None" IncludeCMS1Search="true" FileTypeDescriptionPropertyFile="I:\UAT\fileTypes.xml" SerialMaterialFlowID="1778865930" CMS2MetaDataFile="./src/main/resources/Metadata/Published MetaDataAlma_Serial.xml" MaterialFlowID="0" InterimFileLocation="C:\Temp\IndigoCleanup" CleanupDelay="1" IncludeProducerList="true" IncludeMultiEntityMenuItem="true" StaffMediatedMetaDataFile="./src/main/resources/Metadata/Published MetaDataAlma_Serial.xml">
+    <CharacterTranslation objectName="Char_@." CharacterToTranslate="@." Position="Beginning" TranslateTo="."/>
+    <CharacterTranslation objectName="Char_@@" CharacterToTranslate="@@" Position="Anywhere" TranslateTo="/"/>
+  </UserData>
+</UserData>

@@ -26,11 +26,10 @@ import java.util.Set;
 
 import javax.swing.DefaultListModel;
 
-import nz.govt.natlib.ndha.common.guiutilities.FormControl;
-import nz.govt.natlib.ndha.common.mets.FileSystemObject;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import nz.govt.natlib.ndha.common.guiutilities.FormControl;
 
 /**
  * 

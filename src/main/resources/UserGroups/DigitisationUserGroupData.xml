@@ -2,8 +2,8 @@
 
 <UserData>
   <Documentation>To edit this file, use Indigo.exe /MetaData</Documentation>
-  <UserData objectName="UserData" IncludeNoCMSOption="false" NoCMSMetaDataFile="./src/main/resources/Metadata/Digitisation MetaData.xml" MaterialFlowID="5" IncludeCMS1Search="true" CMS2MetaDataFile="./src/main/resources/Metadata/Digitisation MetaData.xml" StaffMediatedMetaDataFile="./src/main/resources/Metadata/Digitisation MetaData.xml" SharedTemplateLocation="I:\UAT\SharedTemplates" IncludeProducerList="false" IncludeMultiEntityMenuItem="true" InterimFileLocation="C:\Temp\IndigoCleanup" CleanupDelay="1" CleanupType="None" UserProducerID="80349" CMS1MetaDataFile="./src/main/resources/Metadata/Digitisation MetaDataVoyager.xml" FileTypeDescriptionPropertyFile="I:\UAT\fileTypes.xml" BulkBatchSize="15" IncludeCMS2Search="true" UserGroupDesc="Digitisation">
-    <CharacterTranslation objectName="Char_@@" TranslateTo="/" Position="Anywhere" CharacterToTranslate="@@"/>
-    <CharacterTranslation objectName="Char_@." TranslateTo="." Position="Beginning" CharacterToTranslate="@."/>
+  <UserData objectName="UserData" NoCMSMetaDataFile="./src/main/resources/Metadata/Digitisation MetaData.xml" IncludeNoCMSOption="false" UserGroupDesc="Digitisation" SharedTemplateLocation="I:\UAT\SharedTemplates" IncludeCMS2Search="true" BulkBatchSize="1" UserProducerID="80349" CMS1MetaDataFile="./src/main/resources/Metadata/Published MetaDataAlma_Mono.xml" CleanupType="None" IncludeCMS1Search="true" FileTypeDescriptionPropertyFile="I:\UAT\fileTypes.xml" CMS2MetaDataFile="./src/main/resources/Metadata/Digitisation MetaData.xml" MaterialFlowID="5" InterimFileLocation="C:\Temp\IndigoCleanup" AlmaMaterialFlowID="1792360347" CleanupDelay="1" IncludeProducerList="false" IncludeMultiEntityMenuItem="true" StaffMediatedMetaDataFile="./src/main/resources/Metadata/Digitisation MetaData.xml">
+    <CharacterTranslation objectName="Char_@." CharacterToTranslate="@." Position="Beginning" TranslateTo="."/>
+    <CharacterTranslation objectName="Char_@@" CharacterToTranslate="@@" Position="Anywhere" TranslateTo="/"/>
   </UserData>
 </UserData>

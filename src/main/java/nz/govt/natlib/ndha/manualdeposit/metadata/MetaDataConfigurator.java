@@ -23,7 +23,6 @@
 package nz.govt.natlib.ndha.manualdeposit.metadata;
 
 import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.Font;
 
 import javax.swing.JOptionPane;
@@ -31,12 +30,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import nz.govt.natlib.ndha.common.exlibris.SIPStatus;
 import nz.govt.natlib.ndha.common.guiutilities.FormControl;
 import nz.govt.natlib.ndha.manualdeposit.FormUtilities;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 
 public class MetaDataConfigurator extends javax.swing.JFrame implements
 		IMetaDataConfigurator {

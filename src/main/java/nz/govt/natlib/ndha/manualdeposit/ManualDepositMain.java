@@ -75,6 +75,7 @@ import nz.govt.natlib.ndha.manualdeposit.dialogs.MissingFiles;
 import nz.govt.natlib.ndha.manualdeposit.metadata.MetaDataFields;
 import nz.govt.natlib.ndha.manualdeposit.metadata.PersonalSettings;
 import nz.govt.natlib.ndha.manualdeposit.metadata.UserGroupData;
+import nz.govt.natlib.ndha.manualdeposit.metadata.UserGroupData.UserGroupDesc;
 import nz.govt.natlib.ndha.manualdeposit.provenanceevent.ProvenanceEventsEditor;
 import nz.govt.natlib.ndha.manualdeposit.provenanceevent.ProvenanceEventsEditorView;
 
@@ -128,6 +129,7 @@ public class ManualDepositMain extends javax.swing.JFrame implements
 	private int theOldHeight3 = 0;
 	private int theOldHeight4 = 0;
 	private String title = "NLNZ Indigo ";
+	private boolean isPublishedUserGroup = false;
 
 	/**
 	 * Creates new form ManualDepositMain
@@ -161,6 +163,12 @@ public class ManualDepositMain extends javax.swing.JFrame implements
 				.isIncludeNoCMSOption());
 		pnlCmsReference.setVisible(searchVisible);
 		mnuViewShowSearch.setVisible(searchVisible);
+		//change radio button text if user group is published.
+		if (theUserGroupData.getUserGroupDesc().equals(UserGroupDesc.Published)){
+			isPublishedUserGroup = true;
+			rbnStaffMediated.setText("Audio");
+			rbnNoCmsRef.setText("Video");
+		}
 		if (theUserGroupData.isIncludeCMS2Search()) {
 			rbnCMS2.setSelected(true);
 		} else if (theUserGroupData.isIncludeCMS1Search()) {
@@ -203,6 +211,7 @@ public class ManualDepositMain extends javax.swing.JFrame implements
 				tblJobQueueFailed, tblJobQueueDeposited, tblJobQueueComplete,
 				mnuFileFavourites, lstProducers, lstMaterialFlow);
 		LOG.debug("setupScreen, handlers added");
+		theUserGroupData.setEmuMaterialFlowID(theUserGroupData.getMaterialFlowID());
 		checkButtons();
 		setCMSDetails();
 		setHotKeyVisibility();
@@ -669,14 +678,26 @@ public class ManualDepositMain extends javax.swing.JFrame implements
 			pnlSearchDetail.setVisible(true);
 			cmdDoSearch.setVisible(true);
 			layout.show(pnlSearchDetail, "Search");
-			showSearchFields(ILSQueryType.eServerType.CMS2);
-			searchFields = depositPresenter.getSearchAttributes().getSearchAttributes(ILSQueryType.eServerType.CMS2).getTheSearchFields();
+			if (isPublishedUserGroup){
+				theUserGroupData.setMaterialFlowID(theUserGroupData.getSerialMaterialFlowID());
+				showSearchFields(ILSQueryType.eServerType.CMS1);
+				searchFields = depositPresenter.getSearchAttributes().getSearchAttributes(ILSQueryType.eServerType.CMS1).getTheSearchFields();
+			} else{
+				theUserGroupData.setMaterialFlowID(theUserGroupData.getEmuMaterialFlowID());
+				showSearchFields(ILSQueryType.eServerType.CMS2);
+				searchFields = depositPresenter.getSearchAttributes().getSearchAttributes(ILSQueryType.eServerType.CMS2).getTheSearchFields();
+			}
 			//If CMS 2  is not working disable "Search" button.
 			if (searchFields.size() == 1){
 				cmdDoSearch.setVisible(false);
 			}
 			depositPresenter.setCMSResults(rec, MetaDataFields.ECMSSystem.CMS2);
 		} else if (rbnCMS1.isSelected()) {
+			if (isPublishedUserGroup){
+				theUserGroupData.setMaterialFlowID(theUserGroupData.getMonoMaterialFlowID());
+			}else {
+				theUserGroupData.setMaterialFlowID(theUserGroupData.getAlmaMaterialFlowID());
+			}
 			pnlSearchDetail.setVisible(true);
 			cmdDoSearch.setVisible(true);
 			layout.show(pnlSearchDetail, "Search");
@@ -688,13 +709,43 @@ public class ManualDepositMain extends javax.swing.JFrame implements
 			}
 			depositPresenter.setCMSResults(rec, MetaDataFields.ECMSSystem.CMS1);
 		} else if (rbnStaffMediated.isSelected()) {
-			pnlSearchDetail.setVisible(true);
-			layout.show(pnlSearchDetail, "SelectProducer");
+			if (isPublishedUserGroup){
+				theUserGroupData.setMaterialFlowID(theUserGroupData.getAudioMaterialFlowID());
+				pnlSearchDetail.setVisible(true);
+				cmdDoSearch.setVisible(true);
+				layout.show(pnlSearchDetail, "Search");
+				showSearchFields(ILSQueryType.eServerType.CMS1);
+				searchFields = depositPresenter.getSearchAttributes().getSearchAttributes(ILSQueryType.eServerType.CMS1).getTheSearchFields();
+				//If CMS 1 system is not working disable "Search" button
+				if (searchFields.size() == 1){
+					cmdDoSearch.setVisible(false);
+				}
+				//depositPresenter.setCMSResults(rec, MetaDataFields.ECMSSystem.CMS1);
+			}else {
+				pnlSearchDetail.setVisible(true);
+				layout.show(pnlSearchDetail, "SelectProducer");
+				//depositPresenter.setCMSResults(rec, MetaDataFields.ECMSSystem.StaffMediated);
+			}
 			depositPresenter.setCMSResults(rec, MetaDataFields.ECMSSystem.StaffMediated);
-		} else {
-			pnlSearchDetail.setVisible(false);
+		} else if (rbnNoCmsRef.isSelected()) {
+			if (isPublishedUserGroup){
+				theUserGroupData.setMaterialFlowID(theUserGroupData.getVideoMaterialFlowID());
+				pnlSearchDetail.setVisible(true);
+				cmdDoSearch.setVisible(true);
+				layout.show(pnlSearchDetail, "Search");
+				showSearchFields(ILSQueryType.eServerType.CMS1);
+				searchFields = depositPresenter.getSearchAttributes().getSearchAttributes(ILSQueryType.eServerType.CMS1).getTheSearchFields();
+				//If CMS 1 system is not working disable "Search" button
+				if (searchFields.size() == 1){
+					cmdDoSearch.setVisible(false);
+				}
+				//depositPresenter.setCMSResults(rec, MetaDataFields.ECMSSystem.CMS2);
+			}else {
+				pnlSearchDetail.setVisible(false);
+				//depositPresenter.setCMSResults(rec, MetaDataFields.ECMSSystem.NoSystem);
+			}
 			depositPresenter.setCMSResults(rec, MetaDataFields.ECMSSystem.NoSystem);
-		}
+		} 
 	}
 
 	private void setDragSourceFileSystem() {
@@ -3078,12 +3129,23 @@ public class ManualDepositMain extends javax.swing.JFrame implements
 	private void doSearch(java.awt.event.ActionEvent evt) {
 		if (canSearch()) {
 			setWaitCursor(true);
-			if (rbnCMS2.isSelected()) {
-				depositPresenter.searchCMS(this,
-						ILSQueryType.eServerType.CMS2, getSearchFields());
-			} else if (rbnCMS1.isSelected()) {
-				depositPresenter.searchCMS(this,
-						ILSQueryType.eServerType.CMS1, getSearchFields());
+			depositPresenter.resetRadioButtons();
+			//If Published user group then always use CMS1 search for any option
+			if (isPublishedUserGroup){
+				if (rbnStaffMediated.isSelected()) {
+					depositPresenter.setStaffMediated(true);
+				} else if (rbnNoCmsRef.isSelected()) {
+					depositPresenter.setNoCMS(true);
+				} else if (rbnCMS2.isSelected()){
+					depositPresenter.setIsCMS2(true);
+				}
+				depositPresenter.searchCMS(this, ILSQueryType.eServerType.CMS1, getSearchFields());
+			} else {
+				if (rbnCMS2.isSelected()) {
+					depositPresenter.searchCMS(this, ILSQueryType.eServerType.CMS2, getSearchFields());
+				} else if (rbnCMS1.isSelected()) {
+					depositPresenter.searchCMS(this, ILSQueryType.eServerType.CMS1, getSearchFields());
+				}
 			}
 			setWaitCursor(false);
 		}

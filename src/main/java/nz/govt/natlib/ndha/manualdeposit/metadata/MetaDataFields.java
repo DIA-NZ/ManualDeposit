@@ -54,7 +54,7 @@ public final class MetaDataFields implements Serializable,
 	 */
 	private static final long serialVersionUID = 436612415898570626L;
 	private final static Log LOG = LogFactory.getLog(MetaDataFields.class);
-	private static String thsCmsIDName = "CMSIdentifier";
+	private static String theCmsIDName = "CMSIdentifier";
 	private static String theCmsSystemName = "CMSSystem";
 	private static String theCmsDescriptionName = "CMSDescription";
 	private static String theCmsReferenceNumber = "ReferenceNumber";
@@ -77,12 +77,17 @@ public final class MetaDataFields implements Serializable,
 	}
 
 	public String getCMSIDAttributeName() {
-		return thsCmsIDName;
+		return theCmsIDName;
 	}
 
-	public String getCMSID() {
+	public String getCMSID(String cmsSystem) {
 		String retVal = null;
-		final IMetaDataTypeExtended type = getMetaDataType(thsCmsIDName);
+		if(cmsSystem.equalsIgnoreCase("CMS1")){
+			theCmsIDName = "objectIdentifierValue";
+		} else {
+			theCmsIDName = "CMSIdentifier";
+		}
+		final IMetaDataTypeExtended type = getMetaDataType(theCmsIDName);
 		if (type != null) {
 			retVal = type.getDataFieldValue();
 		}
@@ -90,7 +95,7 @@ public final class MetaDataFields implements Serializable,
 	}
 
 	public void setCMSID(final String value) throws Exception {
-		final IMetaDataTypeExtended type = getMetaDataType(thsCmsIDName);
+		final IMetaDataTypeExtended type = getMetaDataType(theCmsIDName);
 		if (type != null) {
 			type.setDataFieldValue(value);
 		}

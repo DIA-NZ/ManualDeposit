@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MetaData>
+  <Documentation>To edit this file, use Indigo.exe /MetaData</Documentation>
+  <MetaData objectName="1" IsCompulsory="true" PopulatedFromCMS="false" IsCMSID="false" IsDCTerms="false" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="objectIdentifierType" DefaultValue="ALMAMMS" IsSetBySystem="true" MaximumLength="100" DataType="Text" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="object Identifier Type" DataFieldValue="" SavedWithTemplate="true" SortOrder="1" DcTermsType="" IsCmsDescription="false" DnxType="objectIdentifier" DnxSubType="objectIdentifierType" IsVisible="true" IsDNX="true" IsCustomizable="false"/>
+  <MetaData objectName="2" IsCompulsory="true" PopulatedFromCMS="true" IsCMSID="false" IsDCTerms="false" CMSFieldName="Id" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="objectIdentifierValue" DefaultValue="" IsSetBySystem="true" MaximumLength="100" DataType="Text" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="object Identifier Value" DataFieldValue="" SavedWithTemplate="true" SortOrder="2" DcTermsType="" IsCmsDescription="false" DnxType="objectIdentifier" DnxSubType="objectIdentifierValue" IsVisible="true" IsDNX="true" IsCustomizable="false"/>
+  <MetaData objectName="3" IsCompulsory="false" PopulatedFromCMS="true" IsCMSID="false" IsDCTerms="false" CMSFieldName="Title" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="CMSDescription" DefaultValue="" IsSetBySystem="true" MaximumLength="600" DataType="Text" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="title" DataFieldDescription="Title" DataFieldValue="" SavedWithTemplate="false" SortOrder="3" IsCmsDescription="false" DnxType="" DnxSubType="" IsVisible="true" IsDNX="false" IsCustomizable="false"/>
+  <MetaData objectName="4" IsCompulsory="true" PopulatedFromCMS="false" IsCMSID="false" IsDCTerms="false" CMSFieldName="Rights" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="AccessRestriction" DefaultValue="" IsSetBySystem="false" MaximumLength="100" DataType="MultiSelect" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="Access Restriction" DataFieldValue="" SavedWithTemplate="true" SortOrder="4" DcTermsType="" IsCmsDescription="false" DnxType="accessRightsPolicy" DnxSubType="policyId" IsVisible="true" IsDNX="true" IsCustomizable="false">
+    <ListValues objectName="100" Value="100" SortOrder="0" Display="Open Access">
+      <ListValues objectName="Partly restricted - Please use surrogate in place of original">Partly restricted - Please use surrogate in place of original</ListValues>
+      <ListValues objectName="Partial restriction">Partial restriction</ListValues>
+      <ListValues objectName="No Access Restrictions">No Access Restrictions</ListValues>
+      <ListValues objectName="Unrestricted">Unrestricted</ListValues>
+      <ListValues objectName="Access to digital object is unrestricted">Access to digital object is unrestricted</ListValues>
+      <ListValues objectName="UR">UR</ListValues>
+      <ListValues objectName="Not restricted">Not restricted</ListValues>
+      <ListValues objectName="Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms">Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms</ListValues>
+    </ListValues>
+    <ListValues objectName="200" Value="200" SortOrder="1" Display="Published-restricted"/>
+    <ListValues objectName="300" Value="300" SortOrder="2" Display="Unpublished-Restricted by location">
+      <ListValues objectName="Access to this item is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms">Access to this item is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms</ListValues>
+      <ListValues objectName="Partly restricted - Digital content available only in Katherine Mansfield Reading Room">Partly restricted - Digital content available only in Katherine Mansfield Reading Room</ListValues>
+      <ListValues objectName="Digital object can only be viewed in Alexander Turnbull Library reading rooms">Digital object can only be viewed in Alexander Turnbull Library reading rooms</ListValues>
+      <ListValues objectName="Access to the abstract is unrestricted">Access to the abstract is unrestricted</ListValues>
+      <ListValues objectName="Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms.">Access is unrestricted. A digital copy is also available to view onsite in the Library's Reading Rooms.</ListValues>
+      <ListValues objectName="Access to the interview is unrestricted">Access to the interview is unrestricted</ListValues>
+      <ListValues objectName="Access to the tape is unrestricted">Access to the tape is unrestricted</ListValues>
+    </ListValues>
+    <ListValues objectName="400" Value="400" SortOrder="3" Display="Unpublished-Restricted by Person">
+      <ListValues objectName="T4">T4</ListValues>
+      <ListValues objectName="T5">T5</ListValues>
+      <ListValues objectName="Access to the collection is unrestricted but individual interviews may be restricted">Access to the collection is unrestricted but individual interviews may be restricted</ListValues>
+      <ListValues objectName="Restricted">Restricted</ListValues>
+      <ListValues objectName="Restricted - Once permission is granted the digital object can only be viewed in Alexander Turnbull Library reading rooms">Restricted - Once permission is granted the digital object can only be viewed in Alexander Turnbull Library reading rooms</ListValues>
+      <ListValues objectName="Restricted - Content cannot be accessed without permission">Restricted - Content cannot be accessed without permission</ListValues>
+      <ListValues objectName="Original may be viewed at the discretion of the Curator">Original may be viewed at the discretion of the Curator</ListValues>
+      <ListValues objectName="Partly restricted - Curator required">Partly restricted - Curator required</ListValues>
+      <ListValues objectName="Access to the interview requires the permission of the Curator of the Oral History Centre">Access to the interview requires the permission of the Curator of the Oral History Centre</ListValues>
+      <ListValues objectName="Access to the interview requires written permission of the donor">Access to the interview requires written permission of the donor</ListValues>
+      <ListValues objectName="Access to the interview requires the written permission of both the interviewee and donor">Access to the interview requires the written permission of both the interviewee and donor</ListValues>
+      <ListValues objectName="Access to the tape requires the written permission of the donor">Access to the tape requires the written permission of the donor</ListValues>
+      <ListValues objectName="Original may be viewed with permission of private owner">Original may be viewed with permission of private owner</ListValues>
+      <ListValues objectName="Restricted - Not able to be requested">Restricted - Not able to be requested</ListValues>
+      <ListValues objectName="Access to the interview requires written permission of the interviewee">Access to the interview requires written permission of the interviewee</ListValues>
+      <ListValues objectName="Access to the tape requires written permission of the interviewee">Access to the tape requires written permission of the interviewee</ListValues>
+      <ListValues objectName="Access to the collection requires written permission of the donor">Access to the collection requires written permission of the donor</ListValues>
+    </ListValues>
+  </MetaData>
+  <MetaData objectName="5" IsCompulsory="true" PopulatedFromCMS="false" IsCMSID="false" IsDCTerms="false" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="EntityType" DefaultValue="One Off" IsSetBySystem="false" MaximumLength="100" DataType="MultiSelect" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="Entity Type" DataFieldValue="" SavedWithTemplate="true" SortOrder="5" IsCmsDescription="false" DnxType="generalIECharacteristics" DnxSubType="IEEntityType" IsVisible="true" IsDNX="true" IsCustomizable="false">
+    <ListValues objectName="PeriodicIE" Value="PeriodicIE" SortOrder="1" Display="Periodic"/>
+    <ListValues objectName="OneOffIE" Value="OneOffIE" SortOrder="0" Display="One Off"/>
+  </MetaData>
+  <MetaData objectName="6" IsCompulsory="false" PopulatedFromCMS="false" IsCMSID="false" IsDCTerms="false" AllowsMultipleRows="false" IsCMSSystem="false" DataFieldName="Source" DefaultValue="" IsSetBySystem="false" MaximumLength="100" DataType="MultiSelect" WillBeUploaded="true" ProvenanceEventOutcome="false" DcType="" DataFieldDescription="Capture System" DataFieldValue="" SavedWithTemplate="true" SortOrder="6" DcTermsType="" IsCmsDescription="false" DnxType="generalRepCharacteristics" DnxSubType="hardwareUsed" IsVisible="true" IsDNX="true" IsCustomizable="false">
+    <ListValues objectName="WindowsXP" Value="WindowsXP" SortOrder="0" Display="Windows XP"/>
+  </MetaData>
+</MetaData>

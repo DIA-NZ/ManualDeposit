@@ -779,7 +779,7 @@ public class MetaDataTest {
 		} catch (Exception ex) {
 			fail();
 		}
-		assertTrue(fields.getCMSID().equals("CMS ID"));
+		assertTrue(fields.getCMSID("CMS2").equals("CMS ID"));
 		try {
 			model.setCMSSystem("CMS System");
 		} catch (Exception ex) {

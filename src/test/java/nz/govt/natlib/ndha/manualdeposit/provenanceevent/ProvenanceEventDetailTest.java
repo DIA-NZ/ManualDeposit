@@ -21,7 +21,8 @@
  */
 package nz.govt.natlib.ndha.manualdeposit.provenanceevent;
 
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.StringContains.containsString;
 import static org.junit.Assert.assertThat;
 import nz.govt.natlib.ndha.manualdeposit.metadata.IMetaDataTypeExtended;
